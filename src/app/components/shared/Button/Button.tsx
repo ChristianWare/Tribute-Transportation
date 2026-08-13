@@ -1,8 +1,6 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ReactNode } from "react";
 import Link from "next/link";
 import styles from "./Button.module.css";
-// import Arrow from "../icons/Arrow/Arrow";
 import Image from "next/image";
 
 interface Props {
@@ -13,7 +11,6 @@ interface Props {
   target?: "_blank" | "_self" | "_parent" | "_top";
   disabled?: boolean;
   children?: ReactNode;
-  // arrow?: boolean;
   image?: boolean;
   onClick?: (
     e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
@@ -30,7 +27,6 @@ export default function Button({
   children,
   onClick,
   direction = "",
-  // arrow,
   image,
   type = "button",
 }: Props) {

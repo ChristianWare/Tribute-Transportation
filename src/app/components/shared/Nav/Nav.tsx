@@ -268,14 +268,9 @@ export default function Nav({
             );
           })}
 
-          {/* Mobile only — dashboard links appear right after nav items */}
-
           <div className={styles.btnContainerii}>
-            <Button href='/book' text='Book your Ride' btnType='white' />
+            <Button href='/book' text='Book your Ride' btnType='navWhite' />
           </div>
-
-          {/* Mobile bottom actions */}
-          {/* Mobile bottom actions */}
         </div>
 
         {isOpen &&
@@ -298,7 +293,7 @@ export default function Nav({
             text here
           </Link>
 
-          <Button href='/book' text='Book your Ride' btnType='white' />
+          <Button href='/book' text='Book your Ride' btnType='navWhite' />
         </div>
 
         <span

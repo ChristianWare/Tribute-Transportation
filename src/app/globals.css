@@ -16,24 +16,13 @@
   line-height: 110%;
   scroll-behavior: smooth;
   scroll-margin-top: 90px;
-  /* 
-  
-  */
-  /* scroll-margin-top: 440px; */
   -webkit-tap-highlight-color: transparent;
   font-family: var(--interTight);
-  /* overscroll-behavior: none; */
 }
 
 html {
   font-size: 62.5%;
   height: 100%;
-}
-
-::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
-  background: transparent;
 }
 
 body {
@@ -52,9 +41,8 @@ h4,
 h5,
 h6,
 span {
-  color: var(--black);
+  color: var(--navy);
   font-family: var(--lora);
-  /* hyphens: auto; */
 }
 
 h1,
@@ -63,7 +51,6 @@ h1,
   font-weight: 400;
   line-height: 60px;
   letter-spacing: -3px;
-  
 }
 
 h2,
