@@ -1,6 +1,6 @@
 .container {
   position: relative;
-  max-height: 1200px;
+  min-height: 98.7vh;
   overflow: hidden;
   margin: 8px;
 }
@@ -34,8 +34,7 @@
 .content {
   position: relative;
   z-index: 4;
-  min-height: 90vh;
-  padding-top: 20rem;
+  padding-top: 27rem;
   padding-bottom: 16rem;
 }
 
@@ -115,7 +114,7 @@
   top: 2px;
 }
 
-@media screen and (max-width: 1368px) {
+@media screen and (max-width: 1268px) {
   .container {
     max-height: 98.5vh;
   }

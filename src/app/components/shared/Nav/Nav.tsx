@@ -7,20 +7,13 @@ import { useEffect, useState, MouseEvent, useRef } from "react";
 import { createPortal } from "react-dom";
 import { usePathname } from "next/navigation";
 import Logo from "../Logo/Logo";
+import LayoutWrapper from "../LayoutWrapper";
 
 export interface NavProps {
   navItemColor?: string;
   color?: string;
   hamburgerColor?: string;
   background?: "white" | "cream" | "accent";
-}
-
-type AppRole = "USER" | "ADMIN" | "DRIVER" | "CORPORATE";
-
-function getRoles(session: any): AppRole[] {
-  const roles = (session?.user as any)?.roles;
-  if (Array.isArray(roles) && roles.length > 0) return roles as AppRole[];
-  return session?.user ? (["USER"] as AppRole[]) : [];
 }
 
 export default function Nav({
@@ -146,156 +139,160 @@ export default function Nav({
 
   const forceSolid = Boolean(background);
 
-  const accountActive = [
-    "/dashboard",
-    "/admin",
-    "/driver-dashboard",
-    "/corporate",
-  ].some((base) => pathname === base || pathname.startsWith(`${base}/`));
+  // When the bar is on a light surface (scrolled, mobile menu open, or a
+  // forced light background) the buttons flip to their navy variants to
+  // match the nav items and logo. Transparent top = white variants.
+  const onLightBar = scrolled || isOpen || Boolean(background);
+  const phoneBtnType = onLightBar ? "navyText" : "whiteText";
+  const reserveBtnType = onLightBar ? "navBlue" : "navWhite";
 
   return (
-    <header
-      className={`${styles.header} ${
-        scrolled ? styles.scrolled : styles.transparent
-      } ${isOpen ? styles.open : ""} ${bgClass} ${
-        forceSolid ? styles.forceSolid : ""
-      }`}
-      ref={navRef}
-    >
-      <nav className={styles.navbar}>
-        <div
-          className={
-            isOpen ? `${styles.navItems} ${styles.active}` : styles.navItems
-          }
-        >
-          {items.map((item) => {
-            const active = isActive(item.href);
-
-            if (item.hasDropdown) {
-              return (
-                <div
-                  key={item.href}
-                  className={styles.servicesWrapper}
-                  onMouseEnter={handleServicesMouseEnter}
-                  onMouseLeave={handleServicesMouseLeave}
-                >
-                  <Link
-                    href={item.href}
-                    className={`${styles.navItem} ${styles[color]} ${
-                      active ? styles.navItemActive : ""
-                    } ${shouldBlend ? styles.blend : ""}`}
-                    onClick={closeMenu}
-                    aria-current={active ? "page" : undefined}
-                  >
-                    {item.text}
-                  </Link>
-
-                  {servicesOpen && !isMobile && (
-                    <div
-                      className={styles.servicesDropdown}
-                      onMouseEnter={handleServicesMouseEnter}
-                      onMouseLeave={handleServicesMouseLeave}
-                    >
-                      <div className={styles.servicesDropdownFooter}>
-                        <Link
-                          href='/services'
-                          className={styles.servicesDropdownAll}
-                          onClick={() => setServicesOpen(false)}
-                        >
-                          View all services →
-                        </Link>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              );
+    <LayoutWrapper paddingNone='paddingNone'>
+      <header
+        className={`${styles.header} ${
+          scrolled ? styles.scrolled : styles.transparent
+        } ${isOpen ? styles.open : ""} ${bgClass} ${
+          forceSolid ? styles.forceSolid : ""
+        }`}
+        ref={navRef}
+      >
+        <nav className={styles.navbar}>
+          <div
+            className={
+              isOpen ? `${styles.navItems} ${styles.active}` : styles.navItems
             }
-
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`${styles.navItem} ${styles[color]} ${
-                  active ? styles.navItemActive : ""
-                } ${shouldBlend ? styles.blend : ""} ${item.isLast ? styles.navItemLast : ""}`}
-                onClick={closeMenu}
-                aria-current={active ? "page" : undefined}
-              >
-                {item.text}
-              </Link>
-            );
-          })}
-
-          <div className={styles.btnContainerii}>
-            <Button href='/book' text='Reserve your Ride' btnType='navWhite' />
-          </div>
-        </div>
-
-        <div
-          className={`${styles.logoContainer} ${
-            shouldBlend ? styles.blend : ""
-          }`}
-        >
-          <Logo />
-        </div>
-
-        {isOpen &&
-          createPortal(
-            <div className={styles.overlay} onClick={closeMenu} />,
-            document.body,
-          )}
-
-        {/* Desktop right side */}
-        <div className={styles.btnContainer}>
-          <Link
-            href='/'
-            className={`${styles.navItem} ${styles[color]} ${
-              accountActive ? styles.navItemActive : ""
-            }`}
-            onClick={closeMenu}
-            aria-current={accountActive ? "page" : undefined}
           >
-            {/* {accountText} */}
-            (520) 661-8289
-          </Link>
+            {items.map((item) => {
+              const active = isActive(item.href);
 
-          <Button href='/book' text='Reserve your Ride' btnType='navWhite' />
-        </div>
+              if (item.hasDropdown) {
+                return (
+                  <div
+                    key={item.href}
+                    className={styles.servicesWrapper}
+                    onMouseEnter={handleServicesMouseEnter}
+                    onMouseLeave={handleServicesMouseLeave}
+                  >
+                    <Link
+                      href={item.href}
+                      className={`${styles.navItem} ${styles[color]} ${
+                        active ? styles.navItemActive : ""
+                      } ${shouldBlend ? styles.blend : ""}`}
+                      onClick={closeMenu}
+                      aria-current={active ? "page" : undefined}
+                    >
+                      {item.text}
+                    </Link>
 
-        <span
-          className={
-            isOpen ? `${styles.hamburger} ${styles.active}` : styles.hamburger
-          }
-          onClick={handleHamburgerClick}
-          onKeyDown={(e) =>
-            (e.key === "Enter" || e.key === " ") &&
-            handleHamburgerClick(e as any)
-          }
-          aria-expanded={isOpen}
-          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
-          role='button'
-          tabIndex={0}
-        >
-          <span
-            aria-hidden='true'
-            className={`${styles.whiteBar} ${styles[hamburgerColor]} ${
+                    {servicesOpen && !isMobile && (
+                      <div
+                        className={styles.servicesDropdown}
+                        onMouseEnter={handleServicesMouseEnter}
+                        onMouseLeave={handleServicesMouseLeave}
+                      >
+                        <div className={styles.servicesDropdownFooter}>
+                          <Link
+                            href='/services'
+                            className={styles.servicesDropdownAll}
+                            onClick={() => setServicesOpen(false)}
+                          >
+                            View all services →
+                          </Link>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              }
+
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`${styles.navItem} ${styles[color]} ${
+                    active ? styles.navItemActive : ""
+                  } ${shouldBlend ? styles.blend : ""} ${item.isLast ? styles.navItemLast : ""}`}
+                  onClick={closeMenu}
+                  aria-current={active ? "page" : undefined}
+                >
+                  {item.text}
+                </Link>
+              );
+            })}
+
+            <div className={styles.btnContainerii}>
+              <Button href='/book' text='Reserve your Ride' btnType='navBlue' />
+            </div>
+          </div>
+
+          <div
+            className={`${styles.logoContainer} ${
               shouldBlend ? styles.blend : ""
             }`}
-          ></span>
+          >
+            <Logo />
+          </div>
+
+          {isOpen &&
+            createPortal(
+              <div className={styles.overlay} onClick={closeMenu} />,
+              document.body,
+            )}
+
+          {/* Desktop right side */}
+          <div className={styles.btnContainer}>
+            <div className={styles.btnContainer}>
+              <Button
+                href='tel:+15206618289'
+                text='(520) 661-8289'
+                btnType={phoneBtnType}
+              />
+            </div>
+
+            <Button
+              href='/book'
+              text='Reserve your Ride'
+              btnType={reserveBtnType}
+            />
+          </div>
+
           <span
-            aria-hidden='true'
-            className={`${styles.whiteBar} ${styles[hamburgerColor]} ${
-              shouldBlend ? styles.blend : ""
-            }`}
-          ></span>
-          <span
-            aria-hidden='true'
-            className={`${styles.whiteBar} ${styles[hamburgerColor]} ${
-              shouldBlend ? styles.blend : ""
-            }`}
-          ></span>
-        </span>
-      </nav>
-    </header>
+            className={
+              isOpen ? `${styles.hamburger} ${styles.active}` : styles.hamburger
+            }
+            onClick={handleHamburgerClick}
+            onKeyDown={(e) =>
+              (e.key === "Enter" || e.key === " ") &&
+              handleHamburgerClick(e as any)
+            }
+            aria-expanded={isOpen}
+            aria-label={
+              isOpen ? "Close navigation menu" : "Open navigation menu"
+            }
+            role='button'
+            tabIndex={0}
+          >
+            <span
+              aria-hidden='true'
+              className={`${styles.whiteBar} ${styles[hamburgerColor]} ${
+                shouldBlend ? styles.blend : ""
+              }`}
+            ></span>
+            <span
+              aria-hidden='true'
+              className={`${styles.whiteBar} ${styles[hamburgerColor]} ${
+                shouldBlend ? styles.blend : ""
+              }`}
+            ></span>
+            <span
+              aria-hidden='true'
+              className={`${styles.whiteBar} ${styles[hamburgerColor]} ${
+                shouldBlend ? styles.blend : ""
+              }`}
+            ></span>
+          </span>
+        </nav>
+      </header>
+    </LayoutWrapper>
   );
 }

@@ -16,22 +16,31 @@
 }
 
 .star {
-  color: var(--cream)
+  color: var(--logo-fg, var(--cream));
+  transition: color 0.35s ease-in-out;
 }
 
 .textTop {
   font-family: var(--lora);
-  color: var(--cream);
+  color: var(--logo-fg, var(--cream));
   font-size: 22px;
   font-weight: 600;
   text-align: center;
+  transition: color 0.35s ease-in-out;
 }
 
 .textBottom {
   font-family: var(--fragmentMono);
-  color: var(--white);
+  color: var(--logo-fg, var(--white));
   text-transform: uppercase;
   font-size: 16px;
   letter-spacing: 10px;
   opacity: 0.7;
+  transition: color 0.35s ease-in-out;
+}
+
+@media screen and (max-width: 1268px) {
+  .textBottom {
+    display: none;
+  }
 }

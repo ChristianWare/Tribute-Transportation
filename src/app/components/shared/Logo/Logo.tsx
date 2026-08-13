@@ -1,6 +1,4 @@
-import React from "react";
 import styles from "./Logo.module.css";
-import Star from "../icons/Star/Star";
 import Starii from "../icons/Starii/Starii";
 
 export default function Logo() {

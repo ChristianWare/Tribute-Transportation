@@ -3,7 +3,7 @@
   top: 15px;
   left: 0;
   right: 0;
-  max-width: 1600px;
+  /* max-width: 1600px; */
   border-radius: 8px;
   margin: 0 auto;
   z-index: 9999;
@@ -22,11 +22,15 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: var(--cream);
+  background: var(--white);
   opacity: 0;
   transition: opacity 0.35s ease-in-out;
   pointer-events: none;
-  border-radius: 8px;
+  border-radius: 10px;
+  width: 97.5%;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  
 }
 
 .transparent::before {
@@ -46,7 +50,12 @@
 .scrolled {
   --nav-fg: var(--black);
   --nav-border: rgba(0, 0, 0, 0.12);
+  --logo-fg: var(--navy);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+}
+
+.open {
+  --logo-fg: var(--navy);
 }
 
 .open::before {
@@ -67,18 +76,21 @@
   background: var(--white);
   --nav-fg: var(--black);
   --nav-border: rgba(0, 0, 0, 0.12);
+  --logo-fg: var(--navy);
 }
 
 .bgCream {
   background: var(--cream);
   --nav-fg: var(--black);
   --nav-border: rgba(0, 0, 0, 0.12);
+  --logo-fg: var(--navy);
 }
 
 .bgAccent {
   background: var(--accent);
   --nav-fg: var(--black);
   --nav-border: rgba(0, 0, 0, 0.12);
+  --logo-fg: var(--navy);
 }
 
 .bgAccent.scrolled::before {
@@ -104,10 +116,8 @@
 }
 
 .navbar {
-  max-width: 1600px;
   margin: 0 auto;
-  padding: 1.5rem 2rem;
-  padding-right: 1rem;
+  padding: 1rem 4rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
@@ -398,14 +408,14 @@
 
 /* ── Mobile (≤1368px) ───────────────────────────────── */
 
-@media screen and (max-width: 1368px) {
+@media screen and (max-width: 1268px) {
   .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.5rem 2rem;
-    padding-right: 2.5rem;
+    padding: 1.5rem 4rem;
   }
+
 
   .navItems {
     position: fixed;
@@ -451,24 +461,13 @@
     margin-bottom: 2rem;
   }
 
-  /* .navItemActive::after {
-    position: static;
-    display: inline-block;
-    margin-left: 8px;
-    vertical-align: middle;
-    left: auto;
-    right: auto;
-    border: 1px solid var(--black);
-  } */
-
-  /* Services wrapper behaves like a normal row on mobile */
   .servicesWrapper {
     width: 100%;
     flex-direction: row;
     align-items: center;
   }
 
-  /* Dropdown never shows on mobile */
+
   .servicesDropdown {
     display: none !important;
   }
@@ -519,6 +518,7 @@
 @media screen and (max-width: 568px) {
   .navbar {
     padding: 1rem 2rem;
+    padding-right: 3rem;
   }
 
   .btnContainerii {

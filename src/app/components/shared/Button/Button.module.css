@@ -26,19 +26,51 @@
 
 .navWhite {
   background-color: var(--white);
+  color: var(--navy) !important;
   font-size: 14px;
   padding: 12px 20px;
   font-weight: 400;
+  transition:
+    background-color 0.35s ease-in-out,
+    color 0.35s ease-in-out;
+}
+
+.navBlue {
+  background-color: var(--navy);
+  color: var(--white) !important;
+  font-size: 14px;
+  padding: 12px 20px;
+  font-weight: 400;
+  transition:
+    background-color 0.35s ease-in-out,
+    color 0.35s ease-in-out;
 }
 
 .white {
   background-color: var(--white);
 }
 
-.whiteText {
-  background-color: none;
-  color: var(--white) !important;
-  border-bottom: 1px solid var(--white);
+.whiteText,
+.navyText {
+  background-color: transparent;
   border-radius: 0;
   padding: 0.5rem 0rem;
+  transition:
+    color 0.35s ease-in-out,
+    border-color 0.35s ease-in-out;
+}
+
+.whiteText {
+  color: var(--white) !important;
+  border-bottom: 1px solid var(--white);
+}
+
+.navy {
+  background-color: var(--navy);
+  color: var(--white) !important;
+}
+
+.navyText {
+  color: var(--navy) !important;
+  border-bottom: 1px solid var(--navy);
 }
