@@ -1,9 +1,10 @@
 .header {
   position: fixed;
-  top: 0;
+  top: 15px;
   left: 0;
   right: 0;
-  width: 100%;
+  max-width: 1600px;
+  border-radius: 8px;
   margin: 0 auto;
   z-index: 9999;
   background: transparent;
@@ -16,21 +17,6 @@
   --nav-border: rgba(255, 255, 255, 0.18);
 }
 
-.header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  background: linear-gradient(
-    to bottom,
-    rgba(120, 120, 120, 0.75),
-    rgba(120, 120, 120, 0)
-  );
-  opacity: 1;
-  transition: opacity 0.35s ease-in-out;
-  pointer-events: none;
-}
-
 .header::after {
   content: "";
   position: absolute;
@@ -40,6 +26,7 @@
   opacity: 0;
   transition: opacity 0.35s ease-in-out;
   pointer-events: none;
+  border-radius: 8px;
 }
 
 .transparent::before {
@@ -129,7 +116,7 @@
 .logoContainer {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 1rem;
   z-index: 10000;
 }
@@ -162,37 +149,21 @@
 .navItems {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  justify-content: flex-start;
+  gap: 3rem;
   list-style: none;
 }
 
 .navItem {
   text-transform: capitalize;
-  font-size: 1.6rem;
+  font-size: 14px;
   line-height: 1;
   color: var(--nav-fg);
-  letter-spacing: -0.8px;
   font-weight: 500;
   z-index: 999;
   white-space: nowrap;
   position: relative;
   transition: color 0.35s ease-in-out;
-}
-
-.navItemActive::after,
-.navItem:hover::after {
-  content: "";
-  position: absolute;
-  bottom: -12px;
-  left: 0;
-  right: 0;
-  height: 5px;
-  width: 5px;
-  border-radius: 50%;
-  border: 1px solid var(--black);
-  background-color: var(--accent);
-  margin: 0 auto;
 }
 
 .black {
@@ -480,7 +451,7 @@
     margin-bottom: 2rem;
   }
 
-  .navItemActive::after {
+  /* .navItemActive::after {
     position: static;
     display: inline-block;
     margin-left: 8px;
@@ -488,7 +459,7 @@
     left: auto;
     right: auto;
     border: 1px solid var(--black);
-  }
+  } */
 
   /* Services wrapper behaves like a normal row on mobile */
   .servicesWrapper {

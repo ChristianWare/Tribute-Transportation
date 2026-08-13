@@ -1,7 +1,6 @@
 import { ReactNode } from "react";
 import Link from "next/link";
 import styles from "./Button.module.css";
-import Image from "next/image";
 
 interface Props {
   href?: string;
@@ -27,7 +26,6 @@ export default function Button({
   children,
   onClick,
   direction = "",
-  image,
   type = "button",
 }: Props) {
   const content = text || children;

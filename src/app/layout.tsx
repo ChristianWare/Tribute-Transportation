@@ -14,7 +14,7 @@ const lora = Lora({
   weight: ["400", "500", "600", "700"],
 });
 
-const fragmentMono = Lora({
+const fragmentMono = Fragment_Mono({
   variable: "--fragmentMono",
   subsets: ["latin"],
   weight: ["400"],

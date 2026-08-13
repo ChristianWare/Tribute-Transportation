@@ -2,7 +2,6 @@ import LayoutWrapper from "../../shared/LayoutWrapper";
 import styles from "./Hero.module.css";
 import Button from "../../shared/Button/Button";
 import Img1 from "../../../../../public/images/hero.png";
-
 import Image from "next/image";
 
 export default function Hero() {
@@ -31,14 +30,13 @@ export default function Hero() {
         </div>
 
         <div className={styles.imgOverlay} />
-        <div className={styles.marqueeWrap}>
+        {/* <div className={styles.marqueeWrap}>
           <div className={styles.cc2}></div>
-        </div>
+        </div> */}
       </div>
       <LayoutWrapper>
         <div className={styles.content}>
           <div className={styles.contentChildren}>
-            {/* ── Existing headline block (unchanged) ── */}
             <div className={styles.cc1}>
               <div className={styles.left}>
                 <h1 className={styles.heading}>
@@ -46,12 +44,21 @@ export default function Hero() {
                 </h1>
 
                 <p className={styles.copy}>
-                  At Nier Transportation, we&apos;re more than a car service;
-                  we&apos;re your trusted partner in high end transportation.
+                  Private car service for airport, corporate, and long-distance
+                  travel across Southern Arizona. Your reservation is confirmed
+                  by email, reconfirmed the day before, and checked again the
+                  morning of your trip.
                 </p>
 
-                <div className={styles.btnContainerii}>
-                  <Button href='/book' text='Book your Ride' btnType='red' />
+                <div className={styles.btnContainerParent}>
+                  <Button href='/book' text='Book your Ride' btnType='white' />
+                  <div className={styles.btnContainer}>
+                    <Button
+                      href='/book'
+                      text='Explore Services'
+                      btnType='whiteText'
+                    />
+                  </div>
                 </div>
               </div>
               <div className={styles.right}>

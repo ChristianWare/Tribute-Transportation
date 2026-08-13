@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable react-hooks/set-state-in-effect */
 "use client";
 
 import Link from "next/link";
@@ -7,9 +5,8 @@ import styles from "./Nav.module.css";
 import Button from "../Button/Button";
 import { useEffect, useState, MouseEvent, useRef } from "react";
 import { createPortal } from "react-dom";
-import Image from "next/image";
-// import Img1 from "../../../../public/images/other/road.jpg";
 import { usePathname } from "next/navigation";
+import Logo from "../Logo/Logo";
 
 export interface NavProps {
   navItemColor?: string;
@@ -130,7 +127,7 @@ export default function Nav({
 
   const items = [
     { text: "Home", href: "/" },
-    { text: "Services *", href: "/services", hasDropdown: true },
+    { text: "Services", href: "/services", hasDropdown: true },
     { text: "Fleet", href: "/fleet" },
     { text: "About", href: "/about" },
     { text: "Contact", href: "/contact", isLast: true },
@@ -166,15 +163,6 @@ export default function Nav({
       ref={navRef}
     >
       <nav className={styles.navbar}>
-        <Link
-          href='/'
-          className={`${styles.logoContainer} ${
-            shouldBlend ? styles.blend : ""
-          }`}
-        >
-          Logo Here
-        </Link>
-
         <div
           className={
             isOpen ? `${styles.navItems} ${styles.active}` : styles.navItems
@@ -208,36 +196,6 @@ export default function Nav({
                       onMouseEnter={handleServicesMouseEnter}
                       onMouseLeave={handleServicesMouseLeave}
                     >
-                      {/* <div className={styles.servicesDropdownInner}>
-                        {services.map((svc) => (
-                          <Link
-                            key={svc.slug}
-                            href={`/services/${svc.slug}`}
-                            className={styles.serviceDropdownItem}
-                            onClick={() => setServicesOpen(false)}
-                          >
-                            <div className={styles.serviceDropdownImg}>
-                              <Image
-                                src={svc.src}
-                                alt={svc.title}
-                                fill
-                                className={styles.serviceDropdownImgEl}
-                              />
-                              <div
-                                className={styles.serviceDropdownImgOverlay}
-                              />
-                            </div>
-                            <div className={styles.serviceDropdownText}>
-                              <span className={styles.serviceDropdownTitle}>
-                                {svc.title}
-                              </span>
-                              <span className={styles.serviceDropdownCopy}>
-                                {svc.copy.split(" ").slice(0, 8).join(" ")}…
-                              </span>
-                            </div>
-                          </Link>
-                        ))}
-                      </div> */}
                       <div className={styles.servicesDropdownFooter}>
                         <Link
                           href='/services'
@@ -273,6 +231,14 @@ export default function Nav({
           </div>
         </div>
 
+        <div
+          className={`${styles.logoContainer} ${
+            shouldBlend ? styles.blend : ""
+          }`}
+        >
+          <Logo />
+        </div>
+
         {isOpen &&
           createPortal(
             <div className={styles.overlay} onClick={closeMenu} />,
@@ -290,7 +256,7 @@ export default function Nav({
             aria-current={accountActive ? "page" : undefined}
           >
             {/* {accountText} */}
-            text here
+            (520) 661-8289
           </Link>
 
           <Button href='/book' text='Book your Ride' btnType='navWhite' />
