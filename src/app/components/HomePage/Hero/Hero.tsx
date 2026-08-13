@@ -51,7 +51,7 @@ export default function Hero() {
                 </p>
 
                 <div className={styles.btnContainerParent}>
-                  <Button href='/book' text='Book your Ride' btnType='white' />
+                  <Button href='/book' text='Reserve your Ride' btnType='white' />
                   <div className={styles.btnContainer}>
                     <Button
                       href='/book'

@@ -227,7 +227,7 @@ export default function Nav({
           })}
 
           <div className={styles.btnContainerii}>
-            <Button href='/book' text='Book your Ride' btnType='navWhite' />
+            <Button href='/book' text='Reserve your Ride' btnType='navWhite' />
           </div>
         </div>
 
@@ -259,7 +259,7 @@ export default function Nav({
             (520) 661-8289
           </Link>
 
-          <Button href='/book' text='Book your Ride' btnType='navWhite' />
+          <Button href='/book' text='Reserve your Ride' btnType='navWhite' />
         </div>
 
         <span
