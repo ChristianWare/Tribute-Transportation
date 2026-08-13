@@ -419,7 +419,7 @@
 
   .navItems {
     position: fixed;
-    top: 0;
+    top: -20px;
     left: 0;
     right: 0;
     border-bottom-right-radius: 10px;
@@ -428,10 +428,10 @@
     align-items: flex-start;
     justify-content: center;
     padding: 2rem;
-    padding-top: 7rem;
-    background: var(--cream);
+    padding-top: 20rem;
+    background: var(--white);
     height: auto;
-    max-height: 90vh;
+    /* max-height: 90vh; */
     overflow-y: auto;
     transform: translateX(110%);
     transition: transform 0.35s ease-in-out;
@@ -524,6 +524,10 @@
   .btnContainerii {
     display: grid;
     width: 100%;
+  }
+
+  .header::after {
+    width: 95%;
   }
 }
 
