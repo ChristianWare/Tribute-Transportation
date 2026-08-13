@@ -31,6 +31,13 @@
   z-index: 2;
 }
 
+.meetSteveContainer {
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  left: 20px;
+}
+
 .content {
   position: relative;
   z-index: 4;
@@ -118,7 +125,7 @@
   .container {
     max-height: 98.5vh;
   }
-  
+
   .cc1 {
     display: flex;
     flex-direction: column;
@@ -128,9 +135,9 @@
     width: 100%;
   }
 
-  .copy {
+  /* .copy {
     font-size: 2rem;
-  }
+  } */
 
   /* .right {
     order: -1;
@@ -170,71 +177,13 @@
 
   .heading {
     max-width: 100%;
-    width: 80%;
+    width: 100%;
   }
 
   .break {
     display: block;
   }
-}
 
-@media screen and (max-width: 568px) {
-  /* .content {
-    padding-top: 5rem;
-    padding-bottom: 12rem;
-  } */
-  /*   
-  .cc1 {
-    gap: 3rem;
-  } */
-
-  .content {
-    padding-top: 6rem;
-  }
-
-  .cc2 {
-    padding: 5rem 1.7rem;
-  }
-
-  .heading {
-    width: 85%;
-  }
-
-  .copy {
-    font-size: 1.6rem;
-  }
-
-  /* .left {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  } */
-
-  .copy {
-    opacity: 0.7;
-  }
-
-  /* .right {
-    display: none;
-  } */
-}
-
-/* Mobile image: shown below breakpoint, hidden above */
-.mobileMedia {
-  position: absolute;
-  inset: 0;
-  display: block; /* visible on mobile by default */
-}
-
-/* Desktop video: hidden on mobile, shown above breakpoint */
-.video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: none; /* hidden on mobile */
-}
-
-@media screen and (min-width: 769px) {
   .mobileMedia {
     display: none;
   }
@@ -242,15 +191,70 @@
   .video {
     display: block;
   }
+
+  .left {
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .content {
+    padding-top: 20rem;
+  }
+
+  .cc1, .left {
+    width: 100%;
+  }
+
+  .heading,
+  .copy {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .copy {
+    /* color: var(--cream); */
+    font-size: 14px;
+    /* display: none; */
+  }
+
+  .btnContainerParent {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    gap: 3rem;
+  }
+
+  .btnContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .meetSteveContainer {
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    left: 10px;
+  }
+}
+
+.mobileMedia {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
 }
 
 .widgetRow {
   padding-bottom: 6rem;
   width: 100%;
-}
-
-@media screen and (max-width: 1068px) {
-  .widgetRow {
-    padding-bottom: 4rem;
-  }
 }

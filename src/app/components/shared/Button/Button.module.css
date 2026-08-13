@@ -10,13 +10,15 @@
   padding: 15px 20px;
   font-size: 16px;
   font-family: var(--interTight);
-  letter-spacing: 0.5px;
+  /* letter-spacing: 0.5px; */
   white-space: nowrap;
   cursor: pointer;
   text-transform: capitalize;
   line-height: 16px;
   user-select: none;
   font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .btn:link,
@@ -33,6 +35,19 @@
   transition:
     background-color 0.35s ease-in-out,
     color 0.35s ease-in-out;
+}
+
+.navWhiteText, .navyText {
+  font-size: 14px;
+  letter-spacing: normal;
+  color: var(--white) !important;
+  border-bottom: 1px solid var(--white);
+  background-color: transparent;
+  border-radius: 0;
+  padding: 0.5rem 0rem;
+  transition:
+    color 0.35s ease-in-out,
+    border-color 0.35s ease-in-out;
 }
 
 .navBlue {

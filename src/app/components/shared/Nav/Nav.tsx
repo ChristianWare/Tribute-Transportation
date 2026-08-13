@@ -143,7 +143,7 @@ export default function Nav({
   // forced light background) the buttons flip to their navy variants to
   // match the nav items and logo. Transparent top = white variants.
   const onLightBar = scrolled || isOpen || Boolean(background);
-  const phoneBtnType = onLightBar ? "navyText" : "whiteText";
+  const phoneBtnType = onLightBar ? "navyText" : "navWhiteText";
   const reserveBtnType = onLightBar ? "navBlue" : "navWhite";
 
   return (
