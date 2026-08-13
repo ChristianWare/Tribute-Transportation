@@ -1,0 +1,195 @@
+.btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+  text-align: center;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-family: var(--interTight);
+  letter-spacing: 0px;
+
+  white-space: nowrap;
+  cursor: pointer;
+  text-transform: capitalize;
+  line-height: 16px;
+  user-select: none;
+}
+
+.btn:hover,
+.left {
+  clip-path: polygon(1.5rem 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 1.5rem);
+}
+
+.left:hover {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 1.5rem),
+    calc(100% - 1.5rem) 100%,
+    0 100%,
+    0 0
+  );
+}
+
+.btn:link,
+.btn:visited {
+  color: inherit;
+}
+
+.arrow {
+  transform: rotate(45deg);
+  background-color: var(--white);
+  color: var(--black);
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.7rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.accent,
+.accent:link,
+.accent:visited {
+  background-color: var(--accent);
+  color: var(--black);
+  /* border: 1px solid var(--accent); */
+}
+
+.accent:hover .arrow {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.accentii,
+.accentii:link,
+.accentii:visited {
+  background-color: var(--accent);
+  color: var(--black);
+  /* border: 1px solid var(--darkGray); */
+}
+
+.accentii:hover .arrow {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.accentii:hover {
+  background-color: var(--accent400);
+  /* color: var(--white); */
+}
+
+.accentOutline,
+.accentOutline:link,
+.accentOutline:visited {
+  background-color: transparent;
+  color: var(--accent);
+  /* border: 1px solid var(--accent); */
+}
+
+.accentOutline:hover {
+  background-color: var(--accent);
+  color: var(--black);
+}
+
+.navaccent {
+  background-color: var(--black);
+  color: var(--accent) !important;
+  /* border: 1px solid var(--black); */
+  padding: 0.3rem 2rem;
+  /* padding-right: 0.3rem; */
+  /* border-radius: 100px; */
+}
+
+.navaccent .arrow {
+  background-color: var(--black);
+  color: var(--white);
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.7rem;
+}
+
+.navaccent:hover .arrow {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.black,
+.black:link,
+.black:visited {
+  background-color: var(--black);
+  color: var(--accent);
+  /* border: 1px solid var(--black); */
+}
+
+.black .arrow {
+  background-color: var(--accent);
+  color: var(--black);
+}
+
+.black:hover .arrow {
+  background-color: var(--black);
+  color: var(--accent);
+}
+
+.gray,
+.gray:link,
+.gray:visited {
+  background-color: var(--lightGray);
+  color: var(--black);
+  /* border: 1px solid var(--lightGray); */
+}
+
+.gray .arrow {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* .gray:hover {
+  background-color: var(--black);
+  color: var(--white);
+} */
+
+.gray:hover .arrow {
+  background-color: var(--lightGray);
+  color: var(--black);
+}
+
+.lightGray,
+.lightGray:link,
+.lightGray:visited {
+  background-color: var(--lightGray);
+  color: var(--black);
+}
+
+.lightGray .arrow {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.lightGray:hover {
+  background-color: var(--accent);
+  color: var(--black);
+}
+
+.lightGray:hover .arrow {
+  background-color: var(--black);
+  color: var(--accent);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .container:hover .arrow {
+    transform: rotate(90deg) translateY(-5px);
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
