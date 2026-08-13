@@ -1,0 +1,47 @@
+.container {
+  padding-top: 16rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6.5rem;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6.5rem;
+}
+
+.heading {
+  text-align: center;
+  max-width: 930px;
+}
+
+.copyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.copy {
+  text-align: center;
+  max-width: 450px;
+}
+
+@media screen and (max-width: 5668px) {
+  .container {
+    padding-top: 10rem;
+  }
+
+  .top {
+    gap: 4rem;
+  }
+}
