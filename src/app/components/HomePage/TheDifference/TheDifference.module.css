@@ -59,6 +59,44 @@
   letter-spacing: -2px;
 }
 
+/* ── Steps ──────────────────────────────────────────── */
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  /* width: 100%; */
+  margin-top: 1rem;
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.4rem;
+  padding: 2.4rem 0;
+  border-bottom: 1px solid var(--cream);
+}
+
+.step:last-child {
+  border-bottom: none;
+}
+
+.stepText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.stepLabel {
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.stepCopy {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 /* ── Foreground video card ──────────────────────────── */
 
 .right {
@@ -113,6 +151,10 @@
   .heading {
     font-size: 28px;
     line-height: 32px;
-    letter-spacing: -0.10px;
+    letter-spacing: -0.1px;
+  }
+
+  .stepLabel {
+    font-size: 1.8rem;
   }
 }
