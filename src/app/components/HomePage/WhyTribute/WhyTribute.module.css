@@ -1,5 +1,5 @@
 .container {
-  padding-top: 16rem;
+  padding: 16rem 0;
   background-color: var(--navy);
 }
 
@@ -60,6 +60,7 @@
 
 .body {
   color: rgba(255, 255, 255, 0.7);
+  width: 95%;
 }
 
 @media screen and (max-width: 968px) {
@@ -71,7 +72,7 @@
 
 @media screen and (max-width: 568px) {
   .container {
-    padding-top: 10rem;
+    padding: 10rem 0;
   }
 
   .mapDataContainer {
