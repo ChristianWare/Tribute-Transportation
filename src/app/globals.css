@@ -1,5 +1,6 @@
 :root {
   --navy: #0b2e3c;
+  --navyii: #203C48;
   --black: #241018;
   --white: #f6f6f5;
   --gray: #eeefee;
@@ -94,7 +95,7 @@ h6,
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.2;
-  letter-spacing: -0.8px;
+  letter-spacing: -0.5px;
 }
 
 button {
