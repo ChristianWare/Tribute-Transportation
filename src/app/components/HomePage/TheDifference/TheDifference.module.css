@@ -1,0 +1,118 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  padding: 16rem 0rem;
+  isolation: isolate;
+}
+
+/* ── Background video layer ─────────────────────────── */
+
+.bgVideoWrapper {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bgVideo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%) scale(1.08); /* scale hides blurred edges */
+  object-fit: cover;
+  filter: blur(8px) brightness(0.55);
+}
+
+/* Extra tint so white text stays readable over any frame */
+.bgVideoWrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(11, 24, 34, 0.55);
+}
+
+/* ── Content ────────────────────────────────────────── */
+
+.content {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 10rem;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3rem;
+}
+
+.heading {
+  color: var(--white);
+  font-size: 4rem;
+  line-height: 44px;
+  letter-spacing: -2px;
+}
+
+/* ── Foreground video card ──────────────────────────── */
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoCard {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.fgVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1268px) {
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.15px;
+  }
+}
+
+@media screen and (max-width: 1068px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .container {
+    padding: 10rem 0rem;
+  }
+
+  .heading {
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: -0.10px;
+  }
+}
