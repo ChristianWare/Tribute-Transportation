@@ -4,24 +4,37 @@ import styles from "./TrustStrip.module.css";
 import Clock from "../../shared/icons/Clock/Clock";
 import Money from "../../shared/icons/Money/Money";
 import OwnerIcon from "../../shared/icons/OwnerIcon/OwnerIcon";
+import HandshakeIcon from "../../shared/icons/HandshakeIcon/HandshakeIcon";
+import Image from "next/image";
+import Img1 from "../../../../../public/images/hero.png";
 
 const data = [
   {
     id: 1,
     title: "Owner-operated since 2011",
     icon: <OwnerIcon className={styles.icon} />,
+    src: Img1,
     copy: "Our company has been owner-operated since 2011, ensuring a personal touch in every service we provide.",
   },
   {
     id: 2,
     title: "Available 24 hours a day, 7 days a week",
     icon: <Clock className={styles.icon} />,
+    src: Img1,
     copy: "We are available around the clock to meet your transportation needs, giving you reliable service when you need it.",
+  },
+  {
+    id: 3,
+    title: "Meet and greet on every airport arrival",
+    icon: <HandshakeIcon className={styles.icon} />,
+    src: Img1,
+    copy: "We include a meet and greet on every airport arrival to ensure a smooth and welcoming experience for our clients.",
   },
   {
     id: 4,
     title: "Flat rates, quoted before every trip",
     icon: <Money className={styles.icon} />,
+    src: Img1,
     copy: "Our flat rates are provided upfront before every trip, so you know exactly what to expect with no hidden fees.",
   },
 ];
@@ -50,9 +63,20 @@ export default function TrustStrip() {
             <div className={styles.mapDataContainer}>
               {data.map((x) => (
                 <div key={x.id} className={styles.card}>
-                  <h3 className={styles.title}>{x.title}</h3>
-                  <div className={styles.iconContainer}>{x.icon}</div>
-                  <p className={styles.copy}>{x.copy}</p>
+                  <div className={styles.imageWrapper}>
+                    <Image
+                      src={x.src}
+                      alt=''
+                      fill
+                      sizes='(max-width: 768px) 100vw, (max-width: 1468px) 50vw, 25vw'
+                      className={styles.img}
+                    />
+                  </div>
+                  <div className={styles.cardContent}>
+                    <h3 className={styles.title}>{x.title}</h3>
+                    <div className={styles.iconContainer}>{x.icon}</div>
+                    <p className={styles.copy}>{x.copy}</p>
+                  </div>
                 </div>
               ))}
             </div>
