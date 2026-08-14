@@ -63,9 +63,15 @@
   width: 95%;
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 1068px) {
   .content {
     grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content, .right {
     gap: 4rem;
   }
 }

@@ -55,7 +55,7 @@ export default function TrustStrip() {
             </h2>
             <div className={styles.copyContainer}>
               <Starii className={styles.star} />
-              <p className={styles.copy}>
+              <p className={styles.topCopy}>
                 Our goal is to provide a seamless, worry-free experience with
                 clear communication and dependable service.
               </p>
