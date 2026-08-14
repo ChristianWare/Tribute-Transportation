@@ -86,8 +86,8 @@
 }
 
 .iconChip {
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.14);
   display: grid;
@@ -96,9 +96,9 @@
   margin-bottom: 0.4rem;
 }
 
-.iconChip svg {
-  width: 2rem;
-  height: 2rem;
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 .cardTitle {

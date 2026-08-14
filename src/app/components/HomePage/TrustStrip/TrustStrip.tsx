@@ -6,28 +6,31 @@ import Money from "../../shared/icons/Money/Money";
 import OwnerIcon from "../../shared/icons/OwnerIcon/OwnerIcon";
 import HandshakeIcon from "../../shared/icons/HandshakeIcon/HandshakeIcon";
 import Image from "next/image";
-import Img1 from "../../../../../public/images/hero.png";
+import Img1 from "../../../../../public/images/laptop.jpg";
+import Img2 from "../../../../../public/images/person1.jpg";
+import Img3 from "../../../../../public/images/watch.jpg";
+import Img4 from "../../../../../public/images/person2.jpg";
 
 const data = [
   {
     id: 1,
     title: "Owner-operated since 2011",
     icon: <OwnerIcon className={styles.icon} />,
-    src: Img1,
+    src: Img2,
     copy: "Our company has been owner-operated since 2011, ensuring a personal touch in every service we provide.",
   },
   {
     id: 2,
     title: "Available 24 hours a day, 7 days a week",
     icon: <Clock className={styles.icon} />,
-    src: Img1,
+    src: Img3,
     copy: "We are available around the clock to meet your transportation needs, giving you reliable service when you need it.",
   },
   {
     id: 3,
     title: "Meet and greet on every airport arrival",
     icon: <HandshakeIcon className={styles.icon} />,
-    src: Img1,
+    src: Img4,
     copy: "We include a meet and greet on every airport arrival to ensure a smooth and welcoming experience for our clients.",
   },
   {

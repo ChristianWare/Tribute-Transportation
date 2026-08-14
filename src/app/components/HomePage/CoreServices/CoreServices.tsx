@@ -3,8 +3,13 @@ import SectionIntro from "../../shared/SectionIntro/SectionIntro";
 import styles from "./CoreServices.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import Img1 from "../../../../../public/images/hero.png";
+import Img1 from "../../../../../public/images/person3.jpg";
+import Img2 from "../../../../../public/images/person5.jpg";
+import Img3 from "../../../../../public/images/road.jpg";
 import Button from "../../shared/Button/Button";
+import Plane from "../../shared/icons/Plane/Plane";
+import Business from "../../shared/icons/Business/Business";
+import Driver from "../../shared/icons/Driver/Driver";
 
 const data = [
   {
@@ -14,6 +19,7 @@ const data = [
     linkText: "Airport service",
     href: "/airport-car-service",
     src: Img1,
+    icon: <Plane className={styles.icon} />,
   },
   {
     id: 2,
@@ -21,7 +27,8 @@ const data = [
     body: "Point-to-point, hourly, roadshows, and standing corporate accounts, on the same schedule every time.",
     linkText: "Corporate travel",
     href: "/corporate-car-service",
-    src: Img1,
+    src: Img2,
+    icon: <Business className={styles.icon} />,
   },
   {
     id: 3,
@@ -29,7 +36,8 @@ const data = [
     body: "One vehicle, one driver, and one flat rate for the whole trip, with no transfers and no meter.",
     linkText: "Long-distance service",
     href: "/long-distance-car-service",
-    src: Img1,
+    src: Img3,
+    icon: <Driver className={styles.icon} />,
   },
 ];
 
@@ -80,20 +88,7 @@ export default function CoreServices() {
                 />
                 <div className={styles.panel}>
                   <div className={styles.iconChip}>
-                    {/* Placeholder — swap for a per-card icon by adding
-                        `icon: <YourIcon />` to each data object, then render {x.icon} */}
-                    <svg
-                      viewBox='0 0 24 24'
-                      fill='none'
-                      stroke='currentColor'
-                      strokeWidth={1.5}
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      width='24'
-                      height='24'
-                    >
-                      <rect x='3' y='3' width='18' height='18' rx='4' />
-                    </svg>
+                   {x.icon}
                   </div>
                   <h3 className={styles.cardTitle}>{x.title}</h3>
                   <p className={styles.cardBody}>{x.body}</p>
