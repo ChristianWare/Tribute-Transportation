@@ -1,14 +1,13 @@
 .container {
-  background-color: var(--accent);
-  padding: 8px 12px;
   width: fit-content;
 }
 
 .text {
-  font-family: var(--GeistMono);
-  font-size: 12px;
-  letter-spacing: 0.5px;
+  font-family: var(--fragmentMono);
+  font-size: 14px;
+  letter-spacing: 0.75px;
   text-transform: uppercase;
+  color: var(--navy);
 }
 
 .colorWhite {
@@ -22,4 +21,3 @@
 .bgBlack {
   background-color: var(--black);
 }
-  

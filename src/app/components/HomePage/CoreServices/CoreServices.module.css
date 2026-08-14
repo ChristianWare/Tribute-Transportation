@@ -1,0 +1,174 @@
+.container {
+  padding-top: 16rem;
+  background-color: var(--white);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15rem;
+}
+
+.left {
+  height: 545px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 5rem;
+  position: sticky;
+  top: 90px;
+}
+
+.leftTop {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.heading {
+  max-width: 500px;
+}
+
+.copy {
+  max-width: 500px;
+  color: #0b2e3ce0;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  position: relative;
+  height: 545px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.6rem;
+  text-decoration: none;
+  position: sticky;
+  top: 90px;
+}
+
+.img {
+  object-fit: cover;
+  z-index: 0;
+}
+
+.panel {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  -webkit-backdrop-filter: blur(32px);
+  backdrop-filter: blur(32px);
+  background-color: #f7f6f529;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.iconChip {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.14);
+  display: grid;
+  place-items: center;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+}
+
+.iconChip svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.cardTitle {
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.cardBody {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 1068px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 6rem;
+  }
+
+  .left {
+    position: static;
+    top: 0;
+    height: auto;
+  }
+
+  .leftTop,
+  .left {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .left {
+    margin-bottom: 5rem;
+  }
+
+  .leftTop {
+    gap: 2rem;
+  }
+
+  .heading {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .container {
+    padding-top: 10rem;
+  }
+
+  .card {
+    height: 400px;
+  }
+
+  .leftBottom {
+    width: 100%;
+  }
+
+  .btnContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem;
+    width: 100%;
+  }
+
+  .btnContainerNavyTextLarge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}

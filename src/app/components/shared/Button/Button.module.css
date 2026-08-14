@@ -37,7 +37,8 @@
     color 0.35s ease-in-out;
 }
 
-.navWhiteText, .navyText {
+.navWhiteText,
+.navyText {
   font-size: 14px;
   letter-spacing: normal;
   color: var(--white) !important;
@@ -88,4 +89,12 @@
 .navyText {
   color: var(--navy) !important;
   border-bottom: 1px solid var(--navy);
+}
+
+.navyTextLarge {
+  color: var(--navy) !important;
+  border-bottom: 1px solid var(--navy);
+  font-size: 16px;
+  border-radius: 0px;
+  padding: 0.5rem 0rem;
 }
