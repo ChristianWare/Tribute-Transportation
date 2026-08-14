@@ -37,15 +37,20 @@
   max-width: 300px;
 }
 
+.bottom {
+  width: 100%;
+}
+
 .mapDataContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  width: 100%;
 }
 
 .card {
   background-color: var(--gray);
-  padding: 3rem;
+  padding:4rem 3rem;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -53,6 +58,8 @@
   justify-content: space-between;
   text-align: center;
   height: 545px;
+  width: 100%;
+  cursor: pointer;
 }
 
 .icon {
