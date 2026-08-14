@@ -6,6 +6,18 @@
 .content {
   display: grid;
   grid-template-columns: 2fr 4fr;
+  grid-gap: 10rem;
+}
+
+.imgContainer {
+  position: relative;
+  width: 350px;
+  height: 350px;
+}
+
+.img {
+  object-fit: contain;
+  filter: invert(1) brightness(2);
 }
 
 .heading {
@@ -71,7 +83,8 @@
 }
 
 @media screen and (max-width: 768px) {
-  .content, .right {
+  .content,
+  .right {
     gap: 4rem;
   }
 }
@@ -79,6 +92,26 @@
 @media screen and (max-width: 568px) {
   .container {
     padding: 10rem 0;
+  }
+
+  .content {
+    gap: 0rem;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .imgContainer {
+    width: 275px;
+    height: 275px;
   }
 
   .mapDataContainer {

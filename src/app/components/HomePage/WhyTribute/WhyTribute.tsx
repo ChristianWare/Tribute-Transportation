@@ -1,6 +1,8 @@
 import LayoutWrapper from "../../shared/LayoutWrapper";
 import SectionIntro from "../../shared/SectionIntro/SectionIntro";
 import styles from "./WhyTribute.module.css";
+import Image from "next/image";
+import Img1 from "../../../../../public/images/suvOutline.png";
 
 const data = [
   {
@@ -40,6 +42,15 @@ export default function WhyTribute() {
         <div className={styles.content}>
           <div className={styles.left}>
             <SectionIntro text='Why Choose Us' color='colorWhite' />
+            <div className={styles.imgContainer}>
+              <Image
+                src={Img1}
+                alt='Tribute Transportation SUV'
+                title='Tribute Transportation SUV'
+                fill
+                className={styles.img}
+              />
+            </div>
           </div>
           <div className={styles.right}>
             <div className={styles.rightTop}>
