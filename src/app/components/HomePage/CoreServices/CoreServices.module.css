@@ -17,7 +17,7 @@
   justify-content: space-between;
   gap: 5rem;
   position: sticky;
-  top: 90px;
+  top: 100px;
 }
 
 .leftTop {
@@ -61,7 +61,7 @@
   padding: 1.6rem;
   text-decoration: none;
   position: sticky;
-  top: 90px;
+  top: 100px;
 }
 
 .img {

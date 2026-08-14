@@ -60,7 +60,7 @@ export default function Hero() {
                 </div>
               </div>
               <div className={styles.right}>
-                <div className={styles.widgetRow}>Yo!</div>
+                {/* <div className={styles.widgetRow}>Yo!</div> */}
               </div>
             </div>
           </div>
