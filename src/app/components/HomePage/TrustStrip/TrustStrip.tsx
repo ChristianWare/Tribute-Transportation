@@ -1,15 +1,15 @@
 import Starii from "../../shared/icons/Starii/Starii";
 import LayoutWrapper from "../../shared/LayoutWrapper";
 import styles from "./TrustStrip.module.css";
-import Company from "../../shared/icons/Company/Company";
 import Clock from "../../shared/icons/Clock/Clock";
 import Money from "../../shared/icons/Money/Money";
+import OwnerIcon from "../../shared/icons/OwnerIcon/OwnerIcon";
 
 const data = [
   {
     id: 1,
     title: "Owner-operated since 2011",
-    icon: <Company className={styles.icon} />,
+    icon: <OwnerIcon className={styles.icon} />,
     copy: "Our company has been owner-operated since 2011, ensuring a personal touch in every service we provide.",
   },
   {
