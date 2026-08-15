@@ -4,6 +4,7 @@ import TrustStrip from "./components/HomePage/TrustStrip/TrustStrip";
 import CoreServices from "./components/HomePage/CoreServices/CoreServices";
 import WhyTribute from "./components/HomePage/WhyTribute/WhyTribute";
 import TheDifference from "./components/HomePage/TheDifference/TheDifference";
+import TheMission from "./components/HomePage/TheMission/TheMission";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <CoreServices />
       <WhyTribute />
       <TheDifference />
+      <TheMission />
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo
       deserunt excepturi voluptate? Eos similique qui fugit delectus harum
       deserunt, nemo facilis esse. Accusamus quibusdam, magni, praesentium
