@@ -5,6 +5,7 @@ import CoreServices from "./components/HomePage/CoreServices/CoreServices";
 import WhyTribute from "./components/HomePage/WhyTribute/WhyTribute";
 import TheDifference from "./components/HomePage/TheDifference/TheDifference";
 import TheMission from "./components/HomePage/TheMission/TheMission";
+import FleetPreview from "./components/HomePage/FleetPreview/FleetPreview";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <WhyTribute />
       <TheDifference />
       <TheMission />
+      <FleetPreview />
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo
       deserunt excepturi voluptate? Eos similique qui fugit delectus harum
       deserunt, nemo facilis esse. Accusamus quibusdam, magni, praesentium
