@@ -5,7 +5,6 @@ import LayoutWrapper from "../../shared/LayoutWrapper";
 import SectionIntro from "../../shared/SectionIntro/SectionIntro";
 import styles from "./FleetPreview.module.css";
 import Image from "next/image";
-import Link from "next/link";
 import Img1 from "../../../../../public/images/fleet/townCar.png";
 import Img2 from "../../../../../public/images/fleet/subZ71.png";
 import Img3 from "../../../../../public/images/fleet/sprinter.png";
@@ -69,7 +68,7 @@ export default function FleetPreview() {
               <SectionIntro text='The Fleet' />
               <br />
               <h2 className={styles.heading}>
-                One passenger or fifty-two. <br /> Same standard of excellence.
+                One passenger or fifty-two. Same standard of excellence.
               </h2>
             </div>
 
