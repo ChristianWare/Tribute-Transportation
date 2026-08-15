@@ -1,6 +1,6 @@
 :root {
   --navy: #0b2e3c;
-  --navyii: #203C48;
+  --navyii: #203c48;
   --black: #241018;
   --white: #f6f6f5;
   --gray: #eeefee;
@@ -167,13 +167,13 @@ select:focus {
     font-size: 35px;
   }
 
-  /* h2,
+  h2,
   .h2 {
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 30px;
+    line-height: 35px;
     font-weight: 400;
     letter-spacing: -1.5px;
-  } */
+  }
 
   h3,
   .h3 {
@@ -181,8 +181,8 @@ select:focus {
     font-weight: 400;
     line-height: 30px;
     letter-spacing: -1.5px;
-     -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   p {
