@@ -2,7 +2,7 @@ import LayoutWrapper from "../../shared/LayoutWrapper";
 import SectionIntro from "../../shared/SectionIntro/SectionIntro";
 import styles from "./WhyTribute.module.css";
 import Image from "next/image";
-import Img1 from "../../../../../public/images/suvOutline.png";
+import Img1 from "../../../../public/images/suvOutline.png";
 
 const data = [
   {

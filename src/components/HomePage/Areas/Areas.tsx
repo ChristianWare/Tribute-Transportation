@@ -2,7 +2,7 @@ import LayoutWrapper from "../../shared/LayoutWrapper";
 import SectionIntro from "../../shared/SectionIntro/SectionIntro";
 import styles from "./Areas.module.css";
 import Image from "next/image";
-import AreaImg from "../../../../../public/images/airportMap.png";
+import AreaImg from "../../../../public/images/airportMap.png";
 import Starii from "../../shared/icons/Starii/Starii";
 
 const routes = [

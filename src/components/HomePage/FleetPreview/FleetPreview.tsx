@@ -5,11 +5,11 @@ import LayoutWrapper from "../../shared/LayoutWrapper";
 import SectionIntro from "../../shared/SectionIntro/SectionIntro";
 import styles from "./FleetPreview.module.css";
 import Image from "next/image";
-import Img1 from "../../../../../public/images/fleet/townCar.png";
-import Img2 from "../../../../../public/images/fleet/subZ71.png";
-import Img3 from "../../../../../public/images/fleet/sprinter.png";
-import Img4 from "../../../../../public/images/fleet/miniCoach.png";
-import Img5 from "../../../../../public/images/fleet/bus.png";
+import Img1 from "../../../../public/images/fleet/townCar.png";
+import Img2 from "../../../../public/images/fleet/subZ71.png";
+import Img3 from "../../../../public/images/fleet/sprinter.png";
+import Img4 from "../../../../public/images/fleet/miniCoach.png";
+import Img5 from "../../../../public/images/fleet/bus.png";
 import Button from "../../shared/Button/Button";
 
 const fleet = [

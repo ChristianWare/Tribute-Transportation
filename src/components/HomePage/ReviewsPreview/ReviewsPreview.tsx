@@ -6,11 +6,11 @@ import LayoutWrapper from "../../shared/LayoutWrapper";
 import SectionIntro from "../../shared/SectionIntro/SectionIntro";
 import Arrow from "../../shared/icons/Arrow/Arrow";
 import Image from "next/image";
-import GrantImg from "../../../../../public/images/people/Grant.jpg";
-import JoelImg from "../../../../../public/images/people/Joel.jpg";
-import LaurenImg from "../../../../../public/images/people/Lauren.jpg";
-import MelevesiImg from "../../../../../public/images/people/Melevesi.jpg";
-import SheilaImg from "../../../../../public/images/people/Sheila.jpg";
+import GrantImg from "../../../../public/images/people/Grant.jpg";
+import JoelImg from "../../../../public/images/people/Joel.jpg";
+import LaurenImg from "../../../../public/images/people/Lauren.jpg";
+import MelevesiImg from "../../../../public/images/people/Melevesi.jpg";
+import SheilaImg from "../../../../public/images/people/Sheila.jpg";
 
 const reviews = [
   {

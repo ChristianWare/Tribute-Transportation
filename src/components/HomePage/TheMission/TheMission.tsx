@@ -1,12 +1,12 @@
 import styles from "./TheMission.module.css";
 import LayoutWrapper from "../../shared/LayoutWrapper";
 import Image from "next/image";
-import Img1 from "../../../../../public/images/flag.jpg";
-import Logo1 from "../../../../../public/images/logos/goldStar.png";
-import Logo2 from "../../../../../public/images/logos/tunnel.png";
-import Logo3 from "../../../../../public/images/logos/esparanza.png";
-import Logo4 from "../../../../../public/images/logos/prima.png";
-import Logo5 from "../../../../../public/images/logos/humane.webp";
+import Img1 from "../../../../public/images/flag.jpg";
+import Logo1 from "../../../../public/images/logos/goldStar.png";
+import Logo2 from "../../../../public/images/logos/tunnel.png";
+import Logo3 from "../../../../public/images/logos/esparanza.png";
+import Logo4 from "../../../../public/images/logos/prima.png";
+import Logo5 from "../../../../public/images/logos/humane.webp";
 
 const data = [
   {

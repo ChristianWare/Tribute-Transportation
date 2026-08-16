@@ -1,7 +1,7 @@
 import LayoutWrapper from "../../shared/LayoutWrapper";
 import styles from "./Hero.module.css";
 import Button from "../../shared/Button/Button";
-import Img1 from "../../../../../public/images/hero.png";
+import Img1 from "../../../../public/images/hero.png";
 import Image from "next/image";
 import MeetSteve from "../MeetSteve/MeetSteve";
 

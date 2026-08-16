@@ -1,7 +1,7 @@
 import LayoutWrapper from "../LayoutWrapper";
 import styles from "./FinalCTA.module.css";
 import Image from "next/image";
-import Img1 from "../../../../../public/images/steve.png";
+import Img1 from "../../../../public/images/steve.png";
 import Button from "../Button/Button";
 import SectionIntro from "../SectionIntro/SectionIntro";
 
@@ -10,7 +10,7 @@ export default function FinalCTA() {
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.content}>
-            <SectionIntro text="Ready to get started?" />
+          <SectionIntro text='Ready to get started?' />
           <h2 className={styles.heading}>
             Tell us where <br /> you're going.
           </h2>
@@ -34,7 +34,9 @@ export default function FinalCTA() {
                 </div>
                 <div className={styles.flex}>
                   <p className={styles.copyii}>Need assistance?</p>
-                  <p className={styles.copyiii}>We’re here to provide support</p>
+                  <p className={styles.copyiii}>
+                    We’re here to provide support
+                  </p>
                 </div>
               </div>
             </div>

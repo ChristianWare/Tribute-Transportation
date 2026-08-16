@@ -6,10 +6,10 @@ import Money from "../../shared/icons/Money/Money";
 import OwnerIcon from "../../shared/icons/OwnerIcon/OwnerIcon";
 import HandshakeIcon from "../../shared/icons/HandshakeIcon/HandshakeIcon";
 import Image from "next/image";
-import Img1 from "../../../../../public/images/laptop.jpg";
-import Img2 from "../../../../../public/images/person1.jpg";
-import Img3 from "../../../../../public/images/watch.jpg";
-import Img4 from "../../../../../public/images/person2.jpg";
+import Img1 from "../../../../public/images/laptop.jpg";
+import Img2 from "../../../../public/images/person1.jpg";
+import Img3 from "../../../../public/images/watch.jpg";
+import Img4 from "../../../../public/images/person2.jpg";
 
 const data = [
   {
