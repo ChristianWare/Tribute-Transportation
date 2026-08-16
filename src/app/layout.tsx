@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter_Tight, Lora, Fragment_Mono } from "next/font/google";
 import "./globals.css";
+import Footer from "./components/shared/Footer/Footer";
 
 const interTight = Inter_Tight({
   variable: "--interTight",
@@ -31,7 +32,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang='en'
       className={` ${interTight.variable} ${lora.variable} ${fragmentMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer  />
+      </body>
     </html>
   );
 }
