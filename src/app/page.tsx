@@ -8,6 +8,7 @@ import TheMission from "./components/HomePage/TheMission/TheMission";
 import FleetPreview from "./components/HomePage/FleetPreview/FleetPreview";
 import Areas from "./components/HomePage/Areas/Areas";
 import ReviewsPreview from "./components/HomePage/ReviewsPreview/ReviewsPreview";
+import Faq from "./components/HomePage/Faq/Faq";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <FleetPreview />
       <Areas />
       <ReviewsPreview />
+      <Faq />
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo
       deserunt excepturi voluptate? Eos similique qui fugit delectus harum
       deserunt, nemo facilis esse. Accusamus quibusdam, magni, praesentium
