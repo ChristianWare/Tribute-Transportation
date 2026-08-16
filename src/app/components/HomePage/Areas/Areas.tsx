@@ -2,7 +2,6 @@ import LayoutWrapper from "../../shared/LayoutWrapper";
 import SectionIntro from "../../shared/SectionIntro/SectionIntro";
 import styles from "./Areas.module.css";
 import Image from "next/image";
-import Link from "next/link";
 import AreaImg from "../../../../../public/images/airportMap.png";
 import Starii from "../../shared/icons/Starii/Starii";
 
@@ -56,17 +55,6 @@ export default function Areas() {
             </div>
           </div>
           <div className={styles.bottom}>
-            <div className={styles.b2}>
-                <span className={`${styles.span} h6`}>Airports we cover</span>
-              <div className={styles.imgContainer}>
-                <Image
-                  src={AreaImg}
-                  alt='Map of Arizona airports served'
-                  title='Areas we serve'
-                  className={styles.img}
-                />
-              </div>
-            </div>
             <div className={styles.b1}>
               <span className={styles.cardLabel}>Signature routes</span>
               <ul className={styles.routeList}>
@@ -96,6 +84,17 @@ export default function Areas() {
               <p className={styles.cardFoot}>
                 One vehicle, one driver, one flat rate — the whole way.
               </p>
+            </div>
+            <div className={styles.b2}>
+              <span className={`${styles.span} h6`}>Airports we cover</span>
+              <div className={styles.imgContainer}>
+                <Image
+                  src={AreaImg}
+                  alt='Map of Arizona airports served'
+                  title='Areas we serve'
+                  className={styles.img}
+                />
+              </div>
             </div>
           </div>
         </div>

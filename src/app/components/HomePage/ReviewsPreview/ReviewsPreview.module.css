@@ -1,5 +1,5 @@
 .container {
-  padding: 16rem 0;
+  padding-top: 16rem;
   background-color: var(--white);
 }
 
@@ -192,7 +192,7 @@
 
 @media screen and (max-width: 568px) {
   .container {
-    padding: 10rem 0;
+    padding-top: 10rem;
   }
 }
 @media screen and (max-width: 480px) {
