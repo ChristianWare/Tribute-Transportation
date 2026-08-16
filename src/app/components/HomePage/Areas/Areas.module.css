@@ -152,19 +152,12 @@
 }
 
 @media screen and (max-width: 568px) {
-  .img {
-    height: 300px;
-    width: 300px;
-  }
-}
-
-@media screen and (max-width: 568px) {
   .container {
     padding: 10rem 0;
   }
 
-  /* .b1,
-  .b3 {
-    padding: 2.8rem;
-  } */
+  .img {
+    height: 300px;
+    width: 300px;
+  }
 }
