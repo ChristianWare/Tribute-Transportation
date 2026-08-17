@@ -1,0 +1,166 @@
+.container {
+  padding: 16rem 0rem;
+  background-color: var(--navy);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+
+/* ── Top: heading + arrows ──────────────────────────── */
+
+.top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.topText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.heading {
+  color: var(--white);
+}
+
+.arrows {
+  display: flex;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.arrowBtn {
+  width: 5.5rem;
+  height: 5.5rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--white);
+  transition:
+    background-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.arrowBtn:hover:not(:disabled) {
+  background-color: rgba(255, 255, 255, 0.14);
+}
+
+.arrowBtn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.arrowBtn svg {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+/* Arrow icon points DOWN by default — rotate to left / right */
+.arrowPrev {
+  transform: rotate(-90deg);
+}
+
+.arrowNext {
+  transform: rotate(90deg);
+}
+
+/* ── Carousel ───────────────────────────────────────── */
+
+.viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.page {
+  flex: 0 0 100%;
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+.card {
+  background-color: var(--navyii, rgba(255, 255, 255, 0.04));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 4rem 3rem;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  gap: 3rem;
+}
+
+.cardLabel {
+  font-family: var(--fragmentMono, monospace);
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.cardName {
+  color: var(--white);
+}
+
+.cardDesc {
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 70%;
+}
+
+/* ── Closing line ───────────────────────────────────── */
+
+.closing {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 400px;
+}
+
+@media screen and (max-width: 1268px) {
+  .page {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .arrows {
+    position: static;
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .arrowBtn {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .page {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .container {
+    padding: 10rem 0rem;
+  }
+}
