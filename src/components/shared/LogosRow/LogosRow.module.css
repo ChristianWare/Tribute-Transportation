@@ -1,0 +1,100 @@
+.iconContainer {
+  --iconSize: 10rem;
+  --gap: 2rem;
+  --speed: 28s;
+  position: relative;
+  overflow: hidden;
+  margin-top: 5rem;
+  width: 100%;
+  height: var(--iconSize);
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    var(--white) 10%,
+    var(--white) 90%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    var(--white) 10%,
+    var(--white) 90%,
+    transparent 100%
+  );
+}
+
+.iconTrack {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  will-change: transform;
+  animation: marquee var(--speed) linear infinite;
+  margin-right: 5rem;
+  margin: 0rem 5rem;
+}
+
+.iconTrackAlt {
+  animation-name: marqueeAlt;
+  margin: 0rem 5rem;
+}
+
+/* was font-size on an SVG — now a sized box holding a fill image */
+.icon {
+  position: relative;
+  width: var(--iconSize);
+  height: var(--iconSize);
+  flex: 0 0 auto;
+  background-color: var(--cream);
+  border-radius: 8px;
+}
+
+.iconImg {
+  object-fit: contain;
+  padding: 1rem;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, -50%, 0);
+  }
+  100% {
+    transform: translate3d(-100%, -50%, 0);
+  }
+}
+
+@keyframes marqueeAlt {
+  0% {
+    transform: translate3d(100%, -50%, 0);
+  }
+  100% {
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@media screen and (max-width: 1268px) {
+  .iconContainer {
+    --iconSize: 8rem;
+    --gap: 4rem;
+    --speed: 26s;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .iconContainer {
+    --iconSize: 6rem;
+    --gap: 3rem;
+    --speed: 22s;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .iconContainer {
+    --iconSize: 4.5rem;
+    --gap: 2.25rem;
+    --speed: 18s;
+  }
+}

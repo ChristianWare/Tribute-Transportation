@@ -4,6 +4,7 @@ import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import CountUp from "@/components/shared/CountUp/CountUp";
 import Image from "next/image";
 import Img1 from "../../../../public/images/azMap.png";
+import LogosRow from "@/components/shared/LogosRow/LogosRow";
 
 const data = [
   { id: 1, number: "15", detail: "Years of Experience" },
@@ -61,6 +62,12 @@ export default function AboutUsHero() {
                   </div>
                 );
               })}
+            </div>
+            <div className={styles.iconContainer}>
+              <LogosRow className={styles.iconTrack} />
+              <LogosRow
+                className={`${styles.iconTrack} ${styles.iconTrackAlt}`}
+              />
             </div>
           </div>
           <div className={styles.right}>
