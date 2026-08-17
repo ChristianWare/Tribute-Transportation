@@ -3,7 +3,7 @@ import styles from "./AboutUsHero.module.css";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import CountUp from "@/components/shared/CountUp/CountUp";
 import Image from "next/image";
-import Img1 from "../../../../public/images/azMap.png";
+import Img1 from "../../../../public/images/suvOutline.png";
 import LogosRow from "@/components/shared/LogosRow/LogosRow";
 
 const data = [
