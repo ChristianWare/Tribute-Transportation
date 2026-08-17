@@ -1,0 +1,163 @@
+.container {
+  padding: 16rem 0;
+  background-color: var(--gray);
+}
+
+.top,
+.copyStarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  text-align: center;
+}
+
+.copyStarContainer {
+  gap: 2rem;
+}
+
+.copy {
+  max-width: 450px;
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* gap: 1.6rem; */
+  margin-top: 6rem;
+  align-items: stretch;
+}
+
+/* ── Shared card bits ───────────────────────────────── */
+
+.cardLabel {
+  font-family: var(--fragmentMono, monospace);
+  font-size: 1.2rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy);
+  opacity: 0.7;
+}
+
+/* ── B1 — signature routes (cream) ──────────────────── */
+
+.b1 {
+  background-color: var(--cream);
+  border-radius: 12px;
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.routeList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.route {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid rgba(22, 42, 62, 0.15);
+  font-size: 1.6rem;
+  color: var(--navy);
+}
+
+.route:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.routeArrow {
+  opacity: 0.5;
+}
+
+.routeTo {
+  font-weight: 600;
+}
+
+/* ── B1 — cities sub-block ──────────────────────────── */
+
+.cities {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(22, 42, 62, 0.15);
+  flex: 1;
+}
+
+.cityList {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: var(--navy);
+}
+
+.cityDot {
+  opacity: 0.4;
+}
+
+.cardFoot {
+  font-size: 1.4rem;
+  color: rgba(22, 42, 62, 0.65);
+}
+
+/* ── B2 — map ───────────────────────────────────────── */
+
+.b2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.span {
+  border-bottom: 1px solid var(--navy);
+}
+
+.imgContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.img {
+  object-fit: contain;
+  width: 700px;
+  height: 700px;
+}
+
+.span {
+  display: block;
+}
+
+@media screen and (max-width: 1268px) {
+  .bottom {
+    grid-template-columns: 1fr;
+    grid-gap: 5rem;
+    margin-top: 5rem;
+  }
+
+  .img {
+    height: 500px;
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .container {
+    padding: 10rem 0;
+  }
+
+  .img {
+    height: 300px;
+    width: 300px;
+  }
+}

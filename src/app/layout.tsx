@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter_Tight, Lora, Fragment_Mono } from "next/font/google";
 import "./globals.css";
-import Footer from "./components/shared/Footer/Footer";
+import Footer from "@/components/shared/Footer/Footer";
 
 const interTight = Inter_Tight({
   variable: "--interTight",

@@ -1,0 +1,212 @@
+.container {
+  padding-top: 16rem;
+  background-color: var(--white);
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+  max-width: 70%;
+}
+
+/* ── Arrows ─────────────────────────────────────────── */
+
+.arrows {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.arrowBtn {
+  width: 5.5rem;
+  height: 5.5rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(22, 42, 62, 0.15);
+  background-color: var(--gray);
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--navy);
+  transition:
+    background-color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.arrowBtn:hover:not(:disabled) {
+  background-color: var(--cream);
+}
+
+.arrowBtn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.arrowBtn svg {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+/* Arrow icon points DOWN by default — rotate to point left / right */
+.arrowPrev {
+  transform: rotate(-90deg);
+}
+
+.arrowNext {
+  transform: rotate(90deg);
+}
+
+/* ── Carousel ───────────────────────────────────────── */
+
+.bottom {
+  width: 100%;
+  margin-top: 6rem;
+}
+
+/* Clips everything outside the current page */
+.viewport {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* The moving row — one full-width page per column */
+.slider {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Each page is exactly the viewport width and holds the 2-up grid */
+.page {
+  flex: 0 0 100%;
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem 6rem;
+}
+
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.4rem;
+}
+
+.cardImg {
+  position: relative;
+  width: 100%;
+  max-width: 18rem;
+  min-height: 24rem;
+  height: 100%;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--gray);
+}
+
+.img {
+  object-fit: cover;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 1.4rem;
+  height: 100%;
+}
+
+.stars {
+  color: var(--gold, #d8a13c);
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.quote {
+  font-size: 16px;
+  max-width: 500px;
+  line-height: 1.6;
+  color: rgba(22, 42, 62, 0.85);
+}
+
+.quoteMark {
+  color: rgba(22, 42, 62, 0.85);
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-top: 0.4rem;
+}
+
+.name {
+  font-family: var(--interTight);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 1rem;
+}
+
+.location {
+  font-family: var(--fragmentMono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(22, 42, 62, 0.55);
+}
+
+@media screen and (max-width: 1268px) {
+  .top {
+    max-width: 100%;
+  }
+
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .arrows {
+    position: static;
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .arrowBtn {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .container {
+    padding-top: 10rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .cardImg {
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slider {
+    transition: none;
+  }
+}

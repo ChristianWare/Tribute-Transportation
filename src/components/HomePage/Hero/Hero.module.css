@@ -1,0 +1,260 @@
+.container {
+  position: relative;
+  min-height: 98.7vh;
+  overflow: hidden;
+  margin: 8px;
+}
+
+.media {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 1rem;
+}
+
+.imgOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.575);
+  z-index: 2;
+}
+
+.meetSteveContainer {
+  position: absolute;
+  z-index: 1;
+  bottom: 20px;
+  left: 20px;
+}
+
+.content {
+  position: relative;
+  z-index: 4;
+  padding-top: 27rem;
+  padding-bottom: 16rem;
+}
+
+.contentChildren {
+  margin-top: 0;
+}
+
+.cc1 {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-gap: 10rem;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 4rem;
+}
+
+.heading {
+  color: var(--white);
+}
+
+.break {
+  display: none;
+}
+
+.copy {
+  color: var(--white);
+  max-width: 500px;
+}
+
+.btnContainerParent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4rem;
+}
+
+.copyii {
+  color: var(--white);
+  max-width: 400px;
+  line-height: 1.5;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3rem;
+  width: 100%;
+}
+
+.widgetRow {
+  width: 100%;
+  /* margin-top: -5rem; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.right2 {
+  margin-left: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.arrow {
+  color: var(--white);
+  transform: rotate(180deg);
+  position: relative;
+  top: 2px;
+}
+
+@media screen and (max-width: 1268px) {
+  .container {
+    max-height: 98.5vh;
+  }
+
+  .cc1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5rem;
+    width: 100%;
+  }
+
+  /* .copy {
+    font-size: 2rem;
+  } */
+
+  /* .right {
+    order: -1;
+  } */
+
+  .heading {
+    max-width: 750px;
+  }
+
+  .content {
+    padding-top: 8rem;
+    padding-bottom: 18rem;
+  }
+
+  .widgetRow {
+    margin-top: 0rem;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  .cc2 {
+    padding: 5rem 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cc2 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
+
+  .right2 {
+    margin-left: 0;
+    margin-right: auto;
+    align-items: center;
+  }
+
+  .heading {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .break {
+    display: block;
+  }
+
+  .mobileMedia {
+    display: none;
+  }
+
+  .video {
+    display: block;
+  }
+
+  .left {
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .content {
+    padding-top: 20rem;
+  }
+
+  .cc1, .left {
+    width: 100%;
+  }
+
+  .heading,
+  .copy {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .copy {
+    /* color: var(--cream); */
+    font-size: 14px;
+    /* display: none; */
+  }
+
+  .btnContainerParent {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    gap: 3rem;
+  }
+
+  .btnContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .meetSteveContainer {
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    left: 10px;
+  }
+}
+
+.mobileMedia {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.widgetRow {
+  padding-bottom: 6rem;
+  width: 100%;
+}

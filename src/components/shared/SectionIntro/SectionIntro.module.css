@@ -1,0 +1,23 @@
+.container {
+  width: fit-content;
+}
+
+.text {
+  font-family: var(--fragmentMono);
+  font-size: 14px;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+.colorWhite {
+  color: var(--white);
+}
+
+.colorYellow {
+  color: var(--accent);
+}
+
+.bgBlack {
+  background-color: var(--black);
+}
