@@ -1,3 +1,4 @@
+import EveryTrip from "@/components/ServicesPage/EveryTrip/EveryTrip";
 import MoreWays from "@/components/ServicesPage/MoreWays/MoreWays";
 import ServicesHeroMain from "@/components/ServicesPage/ServicesHeroMain/ServicesHeroMain";
 import ServicesPreview from "@/components/ServicesPage/ServicesPreview/ServicesPreview";
@@ -10,6 +11,7 @@ export default function ServicesPage() {
       <ServicesHeroMain />
       <ServicesPreview />
       <MoreWays />
+      <EveryTrip />
     </main>
   );
 }
