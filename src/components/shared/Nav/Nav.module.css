@@ -81,7 +81,14 @@
 
 .bgCream {
   background: var(--cream);
-  --nav-fg: var(--black);
+  --nav-fg: var(--navy); 
+  --nav-border: rgba(0, 0, 0, 0.12);
+  --logo-fg: var(--navy);
+}
+
+.bgwhite {
+  background: var(--white);
+  --nav-fg: var(--navy); 
   --nav-border: rgba(0, 0, 0, 0.12);
   --logo-fg: var(--navy);
 }
@@ -113,6 +120,25 @@
 .bgWhite.scrolled {
   --nav-fg: var(--black);
   --nav-border: rgba(0, 0, 0, 0.12);
+}
+
+/* ── Permanent light mode (color='white') ──────────── */
+/* Nav stays light even after scrolling: white text, no
+   white background pill, light logo & buttons. The mobile
+   menu (.open) still switches to its dark-on-white look. */
+.forceLight,
+.forceLight.scrolled {
+  --nav-fg: var(--white);
+  --nav-border: rgba(255, 255, 255, 0.18);
+  box-shadow: none;
+}
+
+.forceLight:not(.open) {
+  --logo-fg: var(--white);
+}
+
+.forceLight:not(.open)::after {
+  opacity: 0 !important;
 }
 
 .navbar {

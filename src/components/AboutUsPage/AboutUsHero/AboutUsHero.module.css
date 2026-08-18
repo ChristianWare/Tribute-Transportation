@@ -74,7 +74,7 @@
 /* ── Logo marquee ───────────────────────────────────── */
 
 .iconContainer {
-  --iconSize: 8rem;
+  --iconSize: 15rem;
   --gap: 2rem;
   --speed: 28s;
   position: relative;

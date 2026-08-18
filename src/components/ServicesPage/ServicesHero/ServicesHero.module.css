@@ -1,0 +1,118 @@
+.container {
+  padding-top: 16rem;
+  background-color: var(--white);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 9rem;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+}
+
+.heading {
+  color: var(--navy);
+}
+
+.sub {
+  max-width: 520px;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: rgba(22, 42, 62, 0.7);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem 7rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 2rem;
+  text-decoration: none;
+}
+
+.iconChip {
+  width: 65px;
+  height: 65px;
+  display: grid;
+  place-items: center;
+  background-color: var(--gray);
+  border-radius: 8px;
+  color: var(--navy);
+  flex-shrink: 0;
+}
+
+.iconChip svg {
+  width: 32px;
+  height: 32px;
+}
+
+.rowText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.rowTitle {
+  font-weight: 500;
+  color: var(--navy);
+}
+
+.rowDesc {
+  font-size: 14px;
+  /* line-height: 1.5; */
+  color: rgba(22, 42, 62, 0.6);
+}
+
+.rowArrow {
+  color: var(--navy);
+  opacity: 0.7;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.icon {
+  rotate: 90deg;
+}
+
+.row:hover .rowArrow {
+  transform: translateX(4px);
+  opacity: 1;
+}
+
+@media screen and (max-width: 1268px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem 5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+
+  .content {
+    gap: 6rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .container {
+    padding-top: 10rem;
+  }
+}

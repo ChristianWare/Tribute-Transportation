@@ -126,6 +126,11 @@ export default function Nav({
     { text: "Contact", href: "/contact", isLast: true },
   ];
 
+  // Permanent light mode: <Nav color='white' /> keeps the bar light from
+  // the start and stays light through scroll (never flips to the white
+  // background / dark-text scrolled state).
+  const light = color === "white";
+
   const shouldBlend = !scrolled && !isOpen && !background;
 
   const bgClass =
@@ -142,9 +147,11 @@ export default function Nav({
   // When the bar is on a light surface (scrolled, mobile menu open, or a
   // forced light background) the buttons flip to their navy variants to
   // match the nav items and logo. Transparent top = white variants.
-  const onLightBar = scrolled || isOpen || Boolean(background);
+  // In permanent light mode the bar never becomes a light surface, so the
+  // buttons keep their white variants throughout.
+  const onLightBar = !light && (scrolled || isOpen || Boolean(background));
   const phoneBtnType = onLightBar ? "navyText" : "navWhiteText";
-  const reserveBtnType = onLightBar ? "navBlue" : "navWhite";
+  const reserveBtnType = onLightBar ? "navy" : "navWhite";
 
   return (
     <LayoutWrapper paddingNone='paddingNone'>
@@ -153,7 +160,7 @@ export default function Nav({
           scrolled ? styles.scrolled : styles.transparent
         } ${isOpen ? styles.open : ""} ${bgClass} ${
           forceSolid ? styles.forceSolid : ""
-        }`}
+        } ${light ? styles.forceLight : ""}`}
         ref={navRef}
       >
         <nav className={styles.navbar}>
