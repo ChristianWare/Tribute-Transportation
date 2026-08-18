@@ -15,7 +15,7 @@ export default function MoreWays() {
             </p>
           </div>
           <div className={styles.right}>
-            <p className={styles.list}>
+            <div className={styles.list}>
               <h2 className={styles.item}>
                 Proms and graduations · Quinceañeras · Concerts and sporting
                 events · Golf and resort transfers · Cruise and train station
@@ -24,7 +24,7 @@ export default function MoreWays() {
                 delivery · Pet-friendly rides · Child and booster seats on
                 request
               </h2>
-            </p>
+            </div>
           </div>
         </div>
       </LayoutWrapper>

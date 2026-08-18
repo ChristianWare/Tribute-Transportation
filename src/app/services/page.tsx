@@ -1,14 +1,14 @@
 import MoreWays from "@/components/ServicesPage/MoreWays/MoreWays";
-import ServicesHero from "@/components/ServicesPage/ServicesHero/ServicesHero";
-import ServicesVideo from "@/components/ServicesPage/ServicesVideo/ServicesVideo";
+import ServicesHeroMain from "@/components/ServicesPage/ServicesHeroMain/ServicesHeroMain";
+import ServicesPreview from "@/components/ServicesPage/ServicesPreview/ServicesPreview";
 import Nav from "@/components/shared/Nav/Nav";
 
 export default function ServicesPage() {
   return (
     <main>
       <Nav background='white' />
-      <ServicesHero />
-      <ServicesVideo />
+      <ServicesHeroMain />
+      <ServicesPreview />
       <MoreWays />
     </main>
   );

@@ -24,7 +24,7 @@ export default function ServicesVideo() {
 
   return (
     <section className={styles.container}>
-      <LayoutWrapper>
+      {/* <LayoutWrapper> */}
         <div className={styles.videoCard}>
           <video
             ref={videoRef}
@@ -85,7 +85,7 @@ export default function ServicesVideo() {
             )}
           </button>
         </div>
-      </LayoutWrapper>
+      {/* </LayoutWrapper> */}
     </section>
   );
 }
