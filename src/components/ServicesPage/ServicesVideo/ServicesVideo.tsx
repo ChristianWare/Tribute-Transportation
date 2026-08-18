@@ -42,13 +42,13 @@ export default function ServicesVideo() {
 
           {/* top row */}
           <div className={styles.topRow}>
-            <h2 className={styles.title}>The road, the way we drive it.</h2>
+            <h3 className={styles.title}>The road, the way we drive it.</h3>
             <span className={styles.runtime}>Tucson, Arizona</span>
           </div>
 
           {/* bottom-left caption */}
           <div className={styles.caption}>
-            <span className={styles.captionLabel}>What you're looking at</span>
+            <p className={styles.captionLabel}>What you're looking at</p>
             <p className={styles.captionText}>
               The same roads we run every day. Tucson to Sky Harbor, the wine
               country south of town, and the long hauls that don't stop at the
