@@ -4,6 +4,7 @@ import EveryCallerMatters from "@/components/AboutUsPage/EveryCallerMatters/Ever
 import History from "@/components/AboutUsPage/History/History";
 import MeetSteve from "@/components/AboutUsPage/MeetSteve/MeetSteve";
 import WhereEveryTripGoes from "@/components/AboutUsPage/WhereEveryTripGoes/WhereEveryTripGoes";
+import WhyChooseUs from "@/components/AboutUsPage/WhyChooseUs/WhyChooseUs";
 import Faq from "@/components/HomePage/Faq/Faq";
 import FinalCTA from "@/components/shared/FinalCTA/FinalCTA";
 import Nav from "@/components/shared/Nav/Nav";
@@ -19,6 +20,7 @@ export default function AboutPage() {
       <History />
       <Bridge />
       <Faq />
+      <WhyChooseUs />
       <FinalCTA />
     </main>
   );
