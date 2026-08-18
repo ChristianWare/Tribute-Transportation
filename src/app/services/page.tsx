@@ -1,8 +1,10 @@
+import Faq from "@/components/HomePage/Faq/Faq";
 import EveryTrip from "@/components/ServicesPage/EveryTrip/EveryTrip";
 import MoreWays from "@/components/ServicesPage/MoreWays/MoreWays";
 import ServiceAreas from "@/components/ServicesPage/ServiceAreas/ServiceAreas";
 import ServicesHeroMain from "@/components/ServicesPage/ServicesHeroMain/ServicesHeroMain";
 import ServicesPreview from "@/components/ServicesPage/ServicesPreview/ServicesPreview";
+import FinalCTA from "@/components/shared/FinalCTA/FinalCTA";
 import Nav from "@/components/shared/Nav/Nav";
 
 export default function ServicesPage() {
@@ -14,6 +16,8 @@ export default function ServicesPage() {
       <MoreWays />
       <EveryTrip />
       <ServiceAreas />
+      <Faq />
+      <FinalCTA />
     </main>
   );
 }
