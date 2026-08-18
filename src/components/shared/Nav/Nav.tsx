@@ -228,7 +228,7 @@ export default function Nav({
             })}
 
             <div className={styles.btnContainerii}>
-              <Button href='/book' text='Reserve your Ride' btnType='navBlue' />
+              <Button href='/book' text='Reserve your ride' btnType='navBlue' />
             </div>
           </div>
 
@@ -258,7 +258,7 @@ export default function Nav({
 
             <Button
               href='/book'
-              text='Reserve your Ride'
+              text='Reserve your ride'
               btnType={reserveBtnType}
             />
           </div>

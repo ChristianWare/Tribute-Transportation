@@ -10,6 +10,7 @@ import Button from "../../shared/Button/Button";
 import Plane from "../../shared/icons/Plane/Plane";
 import Business from "../../shared/icons/Business/Business";
 import Driver from "../../shared/icons/Driver/Driver";
+import ServicesHero from "@/components/ServicesPage/ServicesHero/ServicesHero";
 
 const data = [
   {
@@ -48,7 +49,7 @@ export default function CoreServices() {
         <div className={styles.content}>
           <div className={styles.left}>
             <div className={styles.leftTop}>
-              <SectionIntro text='What We Do' />
+              <SectionIntro text='Core Services' />
               <h2 className={styles.heading}>
                 Three ways most people come to us.
               </h2>
@@ -97,6 +98,7 @@ export default function CoreServices() {
             ))}
           </div>
         </div>
+        <ServicesHero />
       </LayoutWrapper>
     </section>
   );

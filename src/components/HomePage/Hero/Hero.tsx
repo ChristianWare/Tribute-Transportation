@@ -40,7 +40,7 @@ export default function Hero() {
             <div className={styles.cc1}>
               <div className={styles.left}>
                 <h1 className={styles.heading}>
-                  You'll never wonder <br /> where your ride is.
+                  We provide Transportation services in Tucson and beyond.
                 </h1>
                 <p className={styles.copy}>
                   Private car service for airport, corporate, and long-distance

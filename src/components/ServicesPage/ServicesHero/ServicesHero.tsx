@@ -1,8 +1,9 @@
 import Link from "next/link";
-import LayoutWrapper from "@/components/shared/LayoutWrapper";
+// import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import SectionIntro from "@/components/shared/SectionIntro/SectionIntro";
 import styles from "./ServicesHero.module.css";
 import Arrow from "@/components/shared/icons/Arrow/Arrow";
+import Button from "@/components/shared/Button/Button";
 
 const services = [
   {
@@ -160,37 +161,40 @@ const services = [
 export default function ServicesHero() {
   return (
     <section className={styles.container}>
-      <LayoutWrapper>
-        <div className={styles.content}>
-          <div className={styles.top}>
-            <SectionIntro text='What We Do' />
-            <h1 className={styles.heading}>
-              We provide transportation for <br /> any kind of trip you need.
-            </h1>
-            <p className={styles.sub}>
-              Private chauffeured transportation across Southern Arizona and
-              into New Mexico. Flat rates quoted before you ride, available
-              around the clock, from a sedan for one to a coach for fifty-two.
-            </p>
-          </div>
-
-          <div className={styles.grid}>
-            {services.map((s) => (
-              // <Link href={s.href} className={styles.row} key={s.id}>
-              <Link href='#' className={styles.row} key={s.id}>
-                <span className={styles.iconChip}>{s.icon}</span>
-                <span className={styles.rowText}>
-                  <p className={styles.rowTitle}>{s.title}</p>
-                  <p className={styles.rowDesc}>{s.desc}</p>
-                </span>
-                <span className={styles.rowArrow} aria-hidden='true'>
-                  <Arrow className={styles.icon} />
-                </span>
-              </Link>
-            ))}
-          </div>
+      {/* <LayoutWrapper> */}
+      <div className={styles.content}>
+        <div className={styles.top}>
+          <SectionIntro text='All Services' />
+          <h2 className={styles.heading}>
+            We provide transportation for <br /> any kind of trip you need.
+          </h2>
+          <p className={styles.sub}>
+            Private chauffeured transportation across Southern Arizona and into
+            New Mexico. Flat rates quoted before you ride, available around the
+            clock, from a sedan for one to a coach for fifty-two.
+          </p>
         </div>
-      </LayoutWrapper>
+
+        <div className={styles.grid}>
+          {services.map((s) => (
+            // <Link href={s.href} className={styles.row} key={s.id}>
+            <Link href='#' className={styles.row} key={s.id}>
+              <span className={styles.iconChip}>{s.icon}</span>
+              <span className={styles.rowText}>
+                <p className={styles.rowTitle}>{s.title}</p>
+                <p className={styles.rowDesc}>{s.desc}</p>
+              </span>
+              <span className={styles.rowArrow} aria-hidden='true'>
+                <Arrow className={styles.icon} />
+              </span>
+            </Link>
+          ))}
+        </div>
+        <div className={styles.btnContainer}>
+          <Button href='#' text='More services details' btnType='navy' />
+        </div>
+      </div>
+      {/* </LayoutWrapper> */}
     </section>
   );
 }

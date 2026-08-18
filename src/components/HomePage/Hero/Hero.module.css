@@ -65,6 +65,7 @@
 
 .heading {
   color: var(--white);
+  max-width: 700px;
 }
 
 .break {
@@ -202,7 +203,8 @@
     padding-top: 20rem;
   }
 
-  .cc1, .left {
+  .cc1,
+  .left {
     width: 100%;
   }
 
