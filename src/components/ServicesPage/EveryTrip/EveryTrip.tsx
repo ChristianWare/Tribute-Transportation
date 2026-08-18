@@ -1,5 +1,8 @@
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import styles from "./EveryTrip.module.css";
+import Image from "next/image";
+import Img1 from "../../../../public/images/suvOutline.png";
+import SectionIntro from "@/components/shared/SectionIntro/SectionIntro";
 
 const steps = [
   {
@@ -24,10 +27,23 @@ export default function EveryTrip() {
     <section className={styles.container}>
       <LayoutWrapper>
         <div className={styles.content}>
-          <h2 className={styles.heading}>
-            The same standard <br /> behind every trip.
-          </h2>
-
+          <div className={styles.top}>
+            <div className={styles.topLeft}>
+              <SectionIntro text='How it works' color='colorWhite' />
+              <h2 className={styles.heading}>
+                The process for booking rides with Tribute Transportation
+              </h2>
+            </div>
+            <div className={styles.imgContainer}>
+              <Image
+                src={Img1}
+                alt='Tribute Transportation SUV'
+                title='Tribute Transportation SUV'
+                fill
+                className={styles.img}
+              />
+            </div>
+          </div>
           <div className={styles.rows}>
             {steps.map((step) => (
               <div className={styles.row} key={step.id}>
