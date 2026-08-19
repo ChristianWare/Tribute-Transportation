@@ -1,0 +1,116 @@
+.container {
+  padding-bottom: 16rem;
+  background-color: var(--navy);
+}
+
+.heading {
+  color: var(--white);
+  margin-bottom: 6rem;
+}
+
+/* ── Grid ───────────────────────────────────────────── */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+.card {
+  background-color: var(--navyii, rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.imgContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  /* background-color: rgba(255, 255, 255, 0.04); */
+  background-color: var(--cream);
+}
+
+.img {
+  object-fit: contain;
+  padding: 2rem;
+}
+
+/* ── Card body ──────────────────────────────────────── */
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2.4rem;
+  flex: 1;
+}
+
+.label {
+  font-family: var(--fragmentMono, monospace);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.name {
+  color: var(--white);
+  flex: 1;
+  margin-bottom: 45px;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.capacity {
+  font-family: var(--fragmentMono, monospace);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.link {
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 2px;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.link:hover {
+  opacity: 0.7;
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+
+@media screen and (max-width: 1100px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .container {
+    padding: 10rem 0rem;
+  }
+}
