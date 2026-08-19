@@ -119,6 +119,18 @@
   border-radius: 6px;
 }
 
+.closing {
+  font-weight: 600;
+  max-width: 500px;
+}
+
+.btnRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
 @media screen and (max-width: 1068px) {
   .content {
     grid-template-columns: 1fr;
@@ -144,15 +156,6 @@
   .left {
     gap: 4rem;
   }
-
-  /* .heading {
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 30px;
-    letter-spacing: -1.5px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  } */
 
   .tabs {
     justify-content: space-between;

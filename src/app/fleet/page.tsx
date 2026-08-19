@@ -1,3 +1,4 @@
+import BestOption from "@/components/FleetPage/BestOption/BestOption";
 import Chauffeur from "@/components/FleetPage/Chauffeur/Chauffeur";
 import FleetPageHero from "@/components/FleetPage/FleetPageHero/FleetPageHero";
 import Vehicles from "@/components/FleetPage/Vehicles/Vehicles";
@@ -10,6 +11,7 @@ export default function FleetPage() {
       <FleetPageHero />
       <Vehicles />
       <Chauffeur />
+      <BestOption />
     </main>
   );
 }
