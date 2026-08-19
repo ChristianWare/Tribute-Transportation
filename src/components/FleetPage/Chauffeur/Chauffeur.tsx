@@ -40,7 +40,6 @@ export default function Chauffeur() {
               </div>
             </div>
           </div>
-
           <div className={styles.right}>
             <h2 className={styles.heading}>
               Every vehicle comes with a professional chauffeur.
@@ -57,7 +56,7 @@ export default function Chauffeur() {
             <div className={styles.facts}>
               {facts.map((f) => (
                 <div className={styles.fact} key={f.id}>
-                  <span className={styles.factStat}>{f.stat}</span>
+                  <span className={`${styles.factStat} h1`}>{f.stat}</span>
                   <p className={styles.factLabel}>{f.label}</p>
                 </div>
               ))}
