@@ -347,9 +347,9 @@
   min-width: 0;
 }
 
-.serviceDropdownItem:hover {
+/* .serviceDropdownItem:hover {
   background: var(--cream);
-}
+} */
 
 .serviceDropdownItem:nth-child(3n) {
   border-right: none;
@@ -379,9 +379,9 @@
   transition: background 0.15s ease;
 }
 
-.serviceDropdownItem:hover .serviceDropdownImgOverlay {
+/* .serviceDropdownItem:hover .serviceDropdownImgOverlay {
   background: rgba(208, 49, 30, 0.15);
-}
+} */
 
 .serviceDropdownText {
   display: flex;
@@ -429,9 +429,9 @@
   transition: opacity 0.15s ease;
 }
 
-.servicesDropdownAll:hover {
+/* .servicesDropdownAll:hover {
   opacity: 0.75;
-}
+} */
 
 @media screen and (max-width: 1268px) {
   .navbar {

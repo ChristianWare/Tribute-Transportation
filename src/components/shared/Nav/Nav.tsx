@@ -191,7 +191,7 @@ export default function Nav({
                       {item.text}
                     </Link>
 
-                    {servicesOpen && !isMobile && (
+                    {/* {servicesOpen && !isMobile && (
                       <div
                         className={styles.servicesDropdown}
                         onMouseEnter={handleServicesMouseEnter}
@@ -207,7 +207,7 @@ export default function Nav({
                           </Link>
                         </div>
                       </div>
-                    )}
+                    )} */}
                   </div>
                 );
               }
