@@ -1,0 +1,195 @@
+.container {
+  padding: 16rem 0 10rem;
+  background-color: var(--white);
+}
+
+.wrap {
+  max-width: 96rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+
+.backLink {
+  color: var(--navy);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  align-self: flex-start;
+  transition: opacity 0.2s ease;
+}
+
+.backLink:hover {
+  opacity: 0.7;
+}
+
+/* ── The card ───────────────────────────────────────── */
+
+.card {
+  background-color: var(--gray);
+  border-radius: 16px;
+  padding: 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ─────────────────────────────────────────── */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.4rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(22, 42, 62, 0.12);
+}
+
+.heading {
+  color: var(--navy);
+  max-width: 24ch;
+}
+
+.imgContainer {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+.img {
+  object-fit: cover;
+  /* padding: 2.4rem; */
+}
+
+.sub {
+  color: rgba(22, 42, 62, 0.7);
+  /* max-width: 60ch; */
+}
+
+.metaLine {
+  font-family: var(--fragmentMono, monospace);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(22, 42, 62, 0.55);
+}
+
+.btnRow {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 0.8rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 4rem 0;
+  border-bottom: 1px solid rgba(22, 42, 62, 0.12);
+}
+
+.para {
+  color: rgba(22, 42, 62, 0.75);
+  /* max-width: 68ch; */
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  width: 100%;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+}
+
+.marker {
+  width: 0.9rem;
+  height: 0.9rem;
+  flex-shrink: 0;
+  margin-top: 0.55em;
+  background-color: rgba(22, 42, 62, 0.35);
+  border-radius: 2px;
+}
+
+.listText {
+  color: rgba(22, 42, 62, 0.75);
+  max-width: 66ch;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: var(--interTight);
+  font-weight: 500;
+
+}
+
+.relatedRow {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 0.8rem;
+}
+
+.relatedLink {
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: opacity 0.2s ease;
+}
+
+.relatedLink:hover {
+  opacity: 0.7;
+}
+
+/* ── Bottom strip ───────────────────────────────────── */
+
+.footerStrip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding-top: 4rem;
+}
+
+.footerText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footerLead {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.footerCopy {
+  color: rgba(22, 42, 62, 0.65);
+  max-width: 48ch;
+}
+
+/* ── Responsive ─────────────────────────────────────── */
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 14rem 0 8rem;
+  }
+
+  .card {
+    padding: 3rem 2.4rem;
+  }
+
+  .footerStrip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

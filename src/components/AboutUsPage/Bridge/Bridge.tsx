@@ -19,7 +19,7 @@ export default function Bridge() {
         <div className={styles.grid}>
           {/* Airport — the big image card */}
           <Link
-            href='/airport-car-service'
+            href='/services/airport-transportation'
             className={`${styles.card} ${styles.airport}`}
           >
             <Image
@@ -52,7 +52,7 @@ export default function Bridge() {
 
           {/* Corporate — small light card */}
           <Link
-            href='/corporate-car-service'
+            href='/services/corporate-car-service'
             className={`${styles.card} ${styles.corporate}`}
           >
             <p className={styles.corporateText}>
@@ -66,7 +66,7 @@ export default function Bridge() {
 
           {/* Occasions — striped card with floating highlight */}
           <Link
-            href='/wedding-transportation'
+            href='/services/wedding-transportation'
             className={`${styles.card} ${styles.occasions}`}
           >
             <div className={styles.stripes} aria-hidden='true' />

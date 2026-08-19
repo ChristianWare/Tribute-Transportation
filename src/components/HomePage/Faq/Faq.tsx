@@ -4,8 +4,7 @@ import { useState } from "react";
 import LayoutWrapper from "../../shared/LayoutWrapper";
 import SectionIntro from "../../shared/SectionIntro/SectionIntro";
 import styles from "./Faq.module.css";
-import Image from "next/image";
-import Img1 from "../../../../../public/images/suvOutline2.png";
+
 
 const faqs = [
   {
